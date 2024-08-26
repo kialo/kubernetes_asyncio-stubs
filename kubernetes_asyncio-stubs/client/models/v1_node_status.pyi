@@ -12,6 +12,9 @@ class V1NodeStatus:
     images: typing.Optional[list[kubernetes_asyncio.client.V1ContainerImage]]
     node_info: typing.Optional[kubernetes_asyncio.client.V1NodeSystemInfo]
     phase: typing.Optional[str]
+    runtime_handlers: typing.Optional[
+        list[kubernetes_asyncio.client.V1NodeRuntimeHandler]
+    ]
     volumes_attached: typing.Optional[list[kubernetes_asyncio.client.V1AttachedVolume]]
     volumes_in_use: typing.Optional[list[str]]
 
@@ -31,6 +34,9 @@ class V1NodeStatus:
         images: typing.Optional[list[kubernetes_asyncio.client.V1ContainerImage]] = ...,
         node_info: typing.Optional[kubernetes_asyncio.client.V1NodeSystemInfo] = ...,
         phase: typing.Optional[str] = ...,
+        runtime_handlers: typing.Optional[
+            list[kubernetes_asyncio.client.V1NodeRuntimeHandler]
+        ] = ...,
         volumes_attached: typing.Optional[
             list[kubernetes_asyncio.client.V1AttachedVolume]
         ] = ...,
@@ -50,6 +56,9 @@ class V1NodeStatusDict(typing.TypedDict, total=False):
     images: typing.Optional[list[kubernetes_asyncio.client.V1ContainerImageDict]]
     nodeInfo: typing.Optional[kubernetes_asyncio.client.V1NodeSystemInfoDict]
     phase: typing.Optional[str]
+    runtimeHandlers: typing.Optional[
+        list[kubernetes_asyncio.client.V1NodeRuntimeHandlerDict]
+    ]
     volumesAttached: typing.Optional[
         list[kubernetes_asyncio.client.V1AttachedVolumeDict]
     ]

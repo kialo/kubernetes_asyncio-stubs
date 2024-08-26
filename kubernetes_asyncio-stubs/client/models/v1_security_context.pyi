@@ -4,6 +4,7 @@ import typing
 
 class V1SecurityContext:
     allow_privilege_escalation: typing.Optional[bool]
+    app_armor_profile: typing.Optional[kubernetes_asyncio.client.V1AppArmorProfile]
     capabilities: typing.Optional[kubernetes_asyncio.client.V1Capabilities]
     privileged: typing.Optional[bool]
     proc_mount: typing.Optional[str]
@@ -21,6 +22,9 @@ class V1SecurityContext:
         self,
         *,
         allow_privilege_escalation: typing.Optional[bool] = ...,
+        app_armor_profile: typing.Optional[
+            kubernetes_asyncio.client.V1AppArmorProfile
+        ] = ...,
         capabilities: typing.Optional[kubernetes_asyncio.client.V1Capabilities] = ...,
         privileged: typing.Optional[bool] = ...,
         proc_mount: typing.Optional[str] = ...,
@@ -42,6 +46,7 @@ class V1SecurityContext:
 
 class V1SecurityContextDict(typing.TypedDict, total=False):
     allowPrivilegeEscalation: typing.Optional[bool]
+    appArmorProfile: typing.Optional[kubernetes_asyncio.client.V1AppArmorProfileDict]
     capabilities: typing.Optional[kubernetes_asyncio.client.V1CapabilitiesDict]
     privileged: typing.Optional[bool]
     procMount: typing.Optional[str]

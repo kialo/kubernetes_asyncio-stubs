@@ -23,6 +23,7 @@ class V1ServiceSpec:
     session_affinity_config: typing.Optional[
         kubernetes_asyncio.client.V1SessionAffinityConfig
     ]
+    traffic_distribution: typing.Optional[str]
     type: typing.Optional[str]
 
     def __init__(
@@ -48,6 +49,7 @@ class V1ServiceSpec:
         session_affinity_config: typing.Optional[
             kubernetes_asyncio.client.V1SessionAffinityConfig
         ] = ...,
+        traffic_distribution: typing.Optional[str] = ...,
         type: typing.Optional[str] = ...,
     ) -> None: ...
     def to_dict(self) -> V1ServiceSpecDict: ...
@@ -73,4 +75,5 @@ class V1ServiceSpecDict(typing.TypedDict, total=False):
     sessionAffinityConfig: typing.Optional[
         kubernetes_asyncio.client.V1SessionAffinityConfigDict
     ]
+    trafficDistribution: typing.Optional[str]
     type: typing.Optional[str]

@@ -122,6 +122,12 @@ from kubernetes_asyncio.client.api.storage_v1_api import StorageV1Api as Storage
 from kubernetes_asyncio.client.api.storage_v1alpha1_api import (
     StorageV1alpha1Api as StorageV1alpha1Api,
 )
+from kubernetes_asyncio.client.api.storagemigration_api import (
+    StoragemigrationApi as StoragemigrationApi,
+)
+from kubernetes_asyncio.client.api.storagemigration_v1alpha1_api import (
+    StoragemigrationV1alpha1Api as StoragemigrationV1alpha1Api,
+)
 from kubernetes_asyncio.client.api.logs_api import LogsApi as LogsApi
 from kubernetes_asyncio.client.api.version_api import VersionApi as VersionApi
 from kubernetes_asyncio.client.api.custom_objects_api import (

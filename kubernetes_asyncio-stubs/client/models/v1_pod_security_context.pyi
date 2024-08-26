@@ -3,6 +3,7 @@ import kubernetes_asyncio.client.api_client
 import typing
 
 class V1PodSecurityContext:
+    app_armor_profile: typing.Optional[kubernetes_asyncio.client.V1AppArmorProfile]
     fs_group: typing.Optional[int]
     fs_group_change_policy: typing.Optional[str]
     run_as_group: typing.Optional[int]
@@ -19,6 +20,9 @@ class V1PodSecurityContext:
     def __init__(
         self,
         *,
+        app_armor_profile: typing.Optional[
+            kubernetes_asyncio.client.V1AppArmorProfile
+        ] = ...,
         fs_group: typing.Optional[int] = ...,
         fs_group_change_policy: typing.Optional[str] = ...,
         run_as_group: typing.Optional[int] = ...,
@@ -39,6 +43,7 @@ class V1PodSecurityContext:
     def to_dict(self) -> V1PodSecurityContextDict: ...
 
 class V1PodSecurityContextDict(typing.TypedDict, total=False):
+    appArmorProfile: typing.Optional[kubernetes_asyncio.client.V1AppArmorProfileDict]
     fsGroup: typing.Optional[int]
     fsGroupChangePolicy: typing.Optional[str]
     runAsGroup: typing.Optional[int]

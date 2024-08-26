@@ -10,6 +10,7 @@ class V1alpha2ResourceClass:
     parameters_ref: typing.Optional[
         kubernetes_asyncio.client.V1alpha2ResourceClassParametersReference
     ]
+    structured_parameters: typing.Optional[bool]
     suitable_nodes: typing.Optional[kubernetes_asyncio.client.V1NodeSelector]
 
     def __init__(
@@ -22,6 +23,7 @@ class V1alpha2ResourceClass:
         parameters_ref: typing.Optional[
             kubernetes_asyncio.client.V1alpha2ResourceClassParametersReference
         ] = ...,
+        structured_parameters: typing.Optional[bool] = ...,
         suitable_nodes: typing.Optional[kubernetes_asyncio.client.V1NodeSelector] = ...,
     ) -> None: ...
     def to_dict(self) -> V1alpha2ResourceClassDict: ...
@@ -34,4 +36,5 @@ class V1alpha2ResourceClassDict(typing.TypedDict, total=False):
     parametersRef: typing.Optional[
         kubernetes_asyncio.client.V1alpha2ResourceClassParametersReferenceDict
     ]
+    structuredParameters: typing.Optional[bool]
     suitableNodes: typing.Optional[kubernetes_asyncio.client.V1NodeSelectorDict]

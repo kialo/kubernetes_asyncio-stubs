@@ -10,6 +10,9 @@ class V1CustomResourceDefinitionVersion:
     deprecation_warning: typing.Optional[str]
     name: str
     schema: typing.Optional[kubernetes_asyncio.client.V1CustomResourceValidation]
+    selectable_fields: typing.Optional[
+        list[kubernetes_asyncio.client.V1SelectableField]
+    ]
     served: bool
     storage: bool
     subresources: typing.Optional[
@@ -28,6 +31,9 @@ class V1CustomResourceDefinitionVersion:
         schema: typing.Optional[
             kubernetes_asyncio.client.V1CustomResourceValidation
         ] = ...,
+        selectable_fields: typing.Optional[
+            list[kubernetes_asyncio.client.V1SelectableField]
+        ] = ...,
         served: bool,
         storage: bool,
         subresources: typing.Optional[
@@ -44,6 +50,9 @@ class V1CustomResourceDefinitionVersionDict(typing.TypedDict, total=False):
     deprecationWarning: typing.Optional[str]
     name: str
     schema: typing.Optional[kubernetes_asyncio.client.V1CustomResourceValidationDict]
+    selectableFields: typing.Optional[
+        list[kubernetes_asyncio.client.V1SelectableFieldDict]
+    ]
     served: bool
     storage: bool
     subresources: typing.Optional[

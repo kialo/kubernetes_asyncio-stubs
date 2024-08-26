@@ -14,6 +14,7 @@ class V1ContainerStatus:
     restart_count: int
     started: typing.Optional[bool]
     state: typing.Optional[kubernetes_asyncio.client.V1ContainerState]
+    volume_mounts: typing.Optional[list[kubernetes_asyncio.client.V1VolumeMountStatus]]
 
     def __init__(
         self,
@@ -31,6 +32,9 @@ class V1ContainerStatus:
         restart_count: int,
         started: typing.Optional[bool] = ...,
         state: typing.Optional[kubernetes_asyncio.client.V1ContainerState] = ...,
+        volume_mounts: typing.Optional[
+            list[kubernetes_asyncio.client.V1VolumeMountStatus]
+        ] = ...,
     ) -> None: ...
     def to_dict(self) -> V1ContainerStatusDict: ...
 
@@ -46,3 +50,6 @@ class V1ContainerStatusDict(typing.TypedDict, total=False):
     restartCount: int
     started: typing.Optional[bool]
     state: typing.Optional[kubernetes_asyncio.client.V1ContainerStateDict]
+    volumeMounts: typing.Optional[
+        list[kubernetes_asyncio.client.V1VolumeMountStatusDict]
+    ]
