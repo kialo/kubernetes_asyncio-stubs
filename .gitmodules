@@ -1,0 +1,3 @@
+[submodule "kubernetes_asyncio"]
+	path = kubernetes_asyncio
+	url = https://github.com/tomplus/kubernetes_asyncio.git
