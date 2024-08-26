@@ -1,0 +1,6 @@
+import io
+
+class RESTResponse(io.IOBase):
+    def __init__(self, resp: int, data: str) -> None: ...
+
+class RESTClientObject: ...
