@@ -24,8 +24,8 @@ class V1CephFSPersistentVolumeSource:
 
 class V1CephFSPersistentVolumeSourceDict(typing.TypedDict, total=False):
     monitors: list[str]
-    path: typing.Optional[str]
-    readOnly: typing.Optional[bool]
-    secretFile: typing.Optional[str]
-    secretRef: typing.Optional[kubernetes_asyncio.client.V1SecretReferenceDict]
-    user: typing.Optional[str]
+    path: str
+    readOnly: bool
+    secretFile: str
+    secretRef: kubernetes_asyncio.client.V1SecretReferenceDict
+    user: str

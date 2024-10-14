@@ -11,4 +11,4 @@ class V1beta1SelfSubjectReviewStatus:
     def to_dict(self) -> V1beta1SelfSubjectReviewStatusDict: ...
 
 class V1beta1SelfSubjectReviewStatusDict(typing.TypedDict, total=False):
-    userInfo: typing.Optional[kubernetes_asyncio.client.V1UserInfoDict]
+    userInfo: kubernetes_asyncio.client.V1UserInfoDict

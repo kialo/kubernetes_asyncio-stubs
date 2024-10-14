@@ -19,8 +19,6 @@ class ApiextensionsV1WebhookClientConfig:
     def to_dict(self) -> ApiextensionsV1WebhookClientConfigDict: ...
 
 class ApiextensionsV1WebhookClientConfigDict(typing.TypedDict, total=False):
-    caBundle: typing.Optional[str]
-    service: typing.Optional[
-        kubernetes_asyncio.client.ApiextensionsV1ServiceReferenceDict
-    ]
-    url: typing.Optional[str]
+    caBundle: str
+    service: kubernetes_asyncio.client.ApiextensionsV1ServiceReferenceDict
+    url: str

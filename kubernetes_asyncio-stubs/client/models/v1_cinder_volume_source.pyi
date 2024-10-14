@@ -21,7 +21,7 @@ class V1CinderVolumeSource:
     def to_dict(self) -> V1CinderVolumeSourceDict: ...
 
 class V1CinderVolumeSourceDict(typing.TypedDict, total=False):
-    fsType: typing.Optional[str]
-    readOnly: typing.Optional[bool]
-    secretRef: typing.Optional[kubernetes_asyncio.client.V1LocalObjectReferenceDict]
+    fsType: str
+    readOnly: bool
+    secretRef: kubernetes_asyncio.client.V1LocalObjectReferenceDict
     volumeID: str

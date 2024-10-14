@@ -22,8 +22,8 @@ class V1VolumeMount:
 
 class V1VolumeMountDict(typing.TypedDict, total=False):
     mountPath: str
-    mountPropagation: typing.Optional[str]
+    mountPropagation: str
     name: str
-    readOnly: typing.Optional[bool]
-    subPath: typing.Optional[str]
-    subPathExpr: typing.Optional[str]
+    readOnly: bool
+    subPath: str
+    subPathExpr: str

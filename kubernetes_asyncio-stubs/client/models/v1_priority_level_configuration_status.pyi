@@ -17,6 +17,6 @@ class V1PriorityLevelConfigurationStatus:
     def to_dict(self) -> V1PriorityLevelConfigurationStatusDict: ...
 
 class V1PriorityLevelConfigurationStatusDict(typing.TypedDict, total=False):
-    conditions: typing.Optional[
-        list[kubernetes_asyncio.client.V1PriorityLevelConfigurationConditionDict]
+    conditions: list[
+        kubernetes_asyncio.client.V1PriorityLevelConfigurationConditionDict
     ]

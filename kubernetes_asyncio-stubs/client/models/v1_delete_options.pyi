@@ -3,10 +3,10 @@ import kubernetes_asyncio.client.api_client
 import typing
 
 class V1DeleteOptions:
-    api_version: typing.Optional[str]
+    api_version: str
     dry_run: typing.Optional[list[str]]
     grace_period_seconds: typing.Optional[int]
-    kind: typing.Optional[str]
+    kind: str
     orphan_dependents: typing.Optional[bool]
     preconditions: typing.Optional[kubernetes_asyncio.client.V1Preconditions]
     propagation_policy: typing.Optional[str]
@@ -25,10 +25,10 @@ class V1DeleteOptions:
     def to_dict(self) -> V1DeleteOptionsDict: ...
 
 class V1DeleteOptionsDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    dryRun: typing.Optional[list[str]]
-    gracePeriodSeconds: typing.Optional[int]
-    kind: typing.Optional[str]
-    orphanDependents: typing.Optional[bool]
-    preconditions: typing.Optional[kubernetes_asyncio.client.V1PreconditionsDict]
-    propagationPolicy: typing.Optional[str]
+    apiVersion: str
+    dryRun: list[str]
+    gracePeriodSeconds: int
+    kind: str
+    orphanDependents: bool
+    preconditions: kubernetes_asyncio.client.V1PreconditionsDict
+    propagationPolicy: str

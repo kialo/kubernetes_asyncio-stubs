@@ -22,9 +22,9 @@ class V1alpha1StorageVersionCondition:
     def to_dict(self) -> V1alpha1StorageVersionConditionDict: ...
 
 class V1alpha1StorageVersionConditionDict(typing.TypedDict, total=False):
-    lastTransitionTime: typing.Optional[datetime.datetime]
-    message: typing.Optional[str]
-    observedGeneration: typing.Optional[int]
+    lastTransitionTime: datetime.datetime
+    message: str
+    observedGeneration: int
     reason: str
     status: str
     type: str

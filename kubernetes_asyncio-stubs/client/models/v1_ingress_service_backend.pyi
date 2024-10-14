@@ -16,4 +16,4 @@ class V1IngressServiceBackend:
 
 class V1IngressServiceBackendDict(typing.TypedDict, total=False):
     name: str
-    port: typing.Optional[kubernetes_asyncio.client.V1ServiceBackendPortDict]
+    port: kubernetes_asyncio.client.V1ServiceBackendPortDict

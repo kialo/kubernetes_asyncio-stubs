@@ -30,10 +30,10 @@ class V1Endpoint:
 
 class V1EndpointDict(typing.TypedDict, total=False):
     addresses: list[str]
-    conditions: typing.Optional[kubernetes_asyncio.client.V1EndpointConditionsDict]
-    deprecatedTopology: typing.Optional[dict[str, str]]
-    hints: typing.Optional[kubernetes_asyncio.client.V1EndpointHintsDict]
-    hostname: typing.Optional[str]
-    nodeName: typing.Optional[str]
-    targetRef: typing.Optional[kubernetes_asyncio.client.V1ObjectReferenceDict]
-    zone: typing.Optional[str]
+    conditions: kubernetes_asyncio.client.V1EndpointConditionsDict
+    deprecatedTopology: dict[str, str]
+    hints: kubernetes_asyncio.client.V1EndpointHintsDict
+    hostname: str
+    nodeName: str
+    targetRef: kubernetes_asyncio.client.V1ObjectReferenceDict
+    zone: str

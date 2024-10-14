@@ -24,7 +24,7 @@ class V1FlexVolumeSource:
 
 class V1FlexVolumeSourceDict(typing.TypedDict, total=False):
     driver: str
-    fsType: typing.Optional[str]
-    options: typing.Optional[dict[str, str]]
-    readOnly: typing.Optional[bool]
-    secretRef: typing.Optional[kubernetes_asyncio.client.V1LocalObjectReferenceDict]
+    fsType: str
+    options: dict[str, str]
+    readOnly: bool
+    secretRef: kubernetes_asyncio.client.V1LocalObjectReferenceDict

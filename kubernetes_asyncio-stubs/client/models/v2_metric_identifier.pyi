@@ -16,4 +16,4 @@ class V2MetricIdentifier:
 
 class V2MetricIdentifierDict(typing.TypedDict, total=False):
     name: str
-    selector: typing.Optional[kubernetes_asyncio.client.V1LabelSelectorDict]
+    selector: kubernetes_asyncio.client.V1LabelSelectorDict

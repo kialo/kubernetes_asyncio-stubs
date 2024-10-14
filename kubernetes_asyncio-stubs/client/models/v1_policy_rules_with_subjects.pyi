@@ -25,10 +25,6 @@ class V1PolicyRulesWithSubjects:
     def to_dict(self) -> V1PolicyRulesWithSubjectsDict: ...
 
 class V1PolicyRulesWithSubjectsDict(typing.TypedDict, total=False):
-    nonResourceRules: typing.Optional[
-        list[kubernetes_asyncio.client.V1NonResourcePolicyRuleDict]
-    ]
-    resourceRules: typing.Optional[
-        list[kubernetes_asyncio.client.V1ResourcePolicyRuleDict]
-    ]
+    nonResourceRules: list[kubernetes_asyncio.client.V1NonResourcePolicyRuleDict]
+    resourceRules: list[kubernetes_asyncio.client.V1ResourcePolicyRuleDict]
     subjects: list[kubernetes_asyncio.client.FlowcontrolV1SubjectDict]

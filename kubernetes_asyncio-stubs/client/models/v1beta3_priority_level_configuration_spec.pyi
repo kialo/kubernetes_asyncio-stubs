@@ -25,10 +25,6 @@ class V1beta3PriorityLevelConfigurationSpec:
     def to_dict(self) -> V1beta3PriorityLevelConfigurationSpecDict: ...
 
 class V1beta3PriorityLevelConfigurationSpecDict(typing.TypedDict, total=False):
-    exempt: typing.Optional[
-        kubernetes_asyncio.client.V1beta3ExemptPriorityLevelConfigurationDict
-    ]
-    limited: typing.Optional[
-        kubernetes_asyncio.client.V1beta3LimitedPriorityLevelConfigurationDict
-    ]
+    exempt: kubernetes_asyncio.client.V1beta3ExemptPriorityLevelConfigurationDict
+    limited: kubernetes_asyncio.client.V1beta3LimitedPriorityLevelConfigurationDict
     type: str

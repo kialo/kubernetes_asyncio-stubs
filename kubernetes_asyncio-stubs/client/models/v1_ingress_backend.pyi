@@ -19,5 +19,5 @@ class V1IngressBackend:
     def to_dict(self) -> V1IngressBackendDict: ...
 
 class V1IngressBackendDict(typing.TypedDict, total=False):
-    resource: typing.Optional[kubernetes_asyncio.client.V1TypedLocalObjectReferenceDict]
-    service: typing.Optional[kubernetes_asyncio.client.V1IngressServiceBackendDict]
+    resource: kubernetes_asyncio.client.V1TypedLocalObjectReferenceDict
+    service: kubernetes_asyncio.client.V1IngressServiceBackendDict

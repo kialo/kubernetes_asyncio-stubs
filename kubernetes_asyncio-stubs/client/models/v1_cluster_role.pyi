@@ -4,9 +4,9 @@ import typing
 
 class V1ClusterRole:
     aggregation_rule: typing.Optional[kubernetes_asyncio.client.V1AggregationRule]
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMeta]
+    api_version: str
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ObjectMeta
     rules: typing.Optional[list[kubernetes_asyncio.client.V1PolicyRule]]
 
     def __init__(
@@ -23,8 +23,8 @@ class V1ClusterRole:
     def to_dict(self) -> V1ClusterRoleDict: ...
 
 class V1ClusterRoleDict(typing.TypedDict, total=False):
-    aggregationRule: typing.Optional[kubernetes_asyncio.client.V1AggregationRuleDict]
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMetaDict]
-    rules: typing.Optional[list[kubernetes_asyncio.client.V1PolicyRuleDict]]
+    aggregationRule: kubernetes_asyncio.client.V1AggregationRuleDict
+    apiVersion: str
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ObjectMetaDict
+    rules: list[kubernetes_asyncio.client.V1PolicyRuleDict]

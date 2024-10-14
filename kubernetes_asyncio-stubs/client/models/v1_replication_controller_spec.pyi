@@ -19,7 +19,7 @@ class V1ReplicationControllerSpec:
     def to_dict(self) -> V1ReplicationControllerSpecDict: ...
 
 class V1ReplicationControllerSpecDict(typing.TypedDict, total=False):
-    minReadySeconds: typing.Optional[int]
-    replicas: typing.Optional[int]
-    selector: typing.Optional[dict[str, str]]
-    template: typing.Optional[kubernetes_asyncio.client.V1PodTemplateSpecDict]
+    minReadySeconds: int
+    replicas: int
+    selector: dict[str, str]
+    template: kubernetes_asyncio.client.V1PodTemplateSpecDict

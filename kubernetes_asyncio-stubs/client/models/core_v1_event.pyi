@@ -5,12 +5,12 @@ import typing
 
 class CoreV1Event:
     action: typing.Optional[str]
-    api_version: typing.Optional[str]
+    api_version: str
     count: typing.Optional[int]
     event_time: typing.Optional[datetime.datetime]
     first_timestamp: typing.Optional[datetime.datetime]
     involved_object: kubernetes_asyncio.client.V1ObjectReference
-    kind: typing.Optional[str]
+    kind: str
     last_timestamp: typing.Optional[datetime.datetime]
     message: typing.Optional[str]
     metadata: kubernetes_asyncio.client.V1ObjectMeta
@@ -46,20 +46,20 @@ class CoreV1Event:
     def to_dict(self) -> CoreV1EventDict: ...
 
 class CoreV1EventDict(typing.TypedDict, total=False):
-    action: typing.Optional[str]
-    apiVersion: typing.Optional[str]
-    count: typing.Optional[int]
-    eventTime: typing.Optional[datetime.datetime]
-    firstTimestamp: typing.Optional[datetime.datetime]
+    action: str
+    apiVersion: str
+    count: int
+    eventTime: datetime.datetime
+    firstTimestamp: datetime.datetime
     involvedObject: kubernetes_asyncio.client.V1ObjectReferenceDict
-    kind: typing.Optional[str]
-    lastTimestamp: typing.Optional[datetime.datetime]
-    message: typing.Optional[str]
+    kind: str
+    lastTimestamp: datetime.datetime
+    message: str
     metadata: kubernetes_asyncio.client.V1ObjectMetaDict
-    reason: typing.Optional[str]
-    related: typing.Optional[kubernetes_asyncio.client.V1ObjectReferenceDict]
-    reportingComponent: typing.Optional[str]
-    reportingInstance: typing.Optional[str]
-    series: typing.Optional[kubernetes_asyncio.client.CoreV1EventSeriesDict]
-    source: typing.Optional[kubernetes_asyncio.client.V1EventSourceDict]
-    type: typing.Optional[str]
+    reason: str
+    related: kubernetes_asyncio.client.V1ObjectReferenceDict
+    reportingComponent: str
+    reportingInstance: str
+    series: kubernetes_asyncio.client.CoreV1EventSeriesDict
+    source: kubernetes_asyncio.client.V1EventSourceDict
+    type: str

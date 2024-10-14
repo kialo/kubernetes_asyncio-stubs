@@ -17,6 +17,4 @@ class V1IngressStatus:
     def to_dict(self) -> V1IngressStatusDict: ...
 
 class V1IngressStatusDict(typing.TypedDict, total=False):
-    loadBalancer: typing.Optional[
-        kubernetes_asyncio.client.V1IngressLoadBalancerStatusDict
-    ]
+    loadBalancer: kubernetes_asyncio.client.V1IngressLoadBalancerStatusDict

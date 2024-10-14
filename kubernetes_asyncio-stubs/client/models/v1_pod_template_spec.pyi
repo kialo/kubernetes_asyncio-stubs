@@ -15,5 +15,5 @@ class V1PodTemplateSpec:
     def to_dict(self) -> V1PodTemplateSpecDict: ...
 
 class V1PodTemplateSpecDict(typing.TypedDict, total=False):
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMetaDict]
-    spec: typing.Optional[kubernetes_asyncio.client.V1PodSpecDict]
+    metadata: kubernetes_asyncio.client.V1ObjectMetaDict
+    spec: kubernetes_asyncio.client.V1PodSpecDict

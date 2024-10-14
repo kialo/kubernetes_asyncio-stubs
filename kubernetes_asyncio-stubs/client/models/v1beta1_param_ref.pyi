@@ -19,7 +19,7 @@ class V1beta1ParamRef:
     def to_dict(self) -> V1beta1ParamRefDict: ...
 
 class V1beta1ParamRefDict(typing.TypedDict, total=False):
-    name: typing.Optional[str]
-    namespace: typing.Optional[str]
-    parameterNotFoundAction: typing.Optional[str]
-    selector: typing.Optional[kubernetes_asyncio.client.V1LabelSelectorDict]
+    name: str
+    namespace: str
+    parameterNotFoundAction: str
+    selector: kubernetes_asyncio.client.V1LabelSelectorDict

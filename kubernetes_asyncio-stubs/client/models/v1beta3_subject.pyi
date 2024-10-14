@@ -23,9 +23,7 @@ class V1beta3Subject:
     def to_dict(self) -> V1beta3SubjectDict: ...
 
 class V1beta3SubjectDict(typing.TypedDict, total=False):
-    group: typing.Optional[kubernetes_asyncio.client.V1beta3GroupSubjectDict]
+    group: kubernetes_asyncio.client.V1beta3GroupSubjectDict
     kind: str
-    serviceAccount: typing.Optional[
-        kubernetes_asyncio.client.V1beta3ServiceAccountSubjectDict
-    ]
-    user: typing.Optional[kubernetes_asyncio.client.V1beta3UserSubjectDict]
+    serviceAccount: kubernetes_asyncio.client.V1beta3ServiceAccountSubjectDict
+    user: kubernetes_asyncio.client.V1beta3UserSubjectDict

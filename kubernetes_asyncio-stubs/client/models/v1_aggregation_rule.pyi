@@ -17,6 +17,4 @@ class V1AggregationRule:
     def to_dict(self) -> V1AggregationRuleDict: ...
 
 class V1AggregationRuleDict(typing.TypedDict, total=False):
-    clusterRoleSelectors: typing.Optional[
-        list[kubernetes_asyncio.client.V1LabelSelectorDict]
-    ]
+    clusterRoleSelectors: list[kubernetes_asyncio.client.V1LabelSelectorDict]

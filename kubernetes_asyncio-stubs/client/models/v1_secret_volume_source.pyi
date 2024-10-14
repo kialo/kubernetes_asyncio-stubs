@@ -19,7 +19,7 @@ class V1SecretVolumeSource:
     def to_dict(self) -> V1SecretVolumeSourceDict: ...
 
 class V1SecretVolumeSourceDict(typing.TypedDict, total=False):
-    defaultMode: typing.Optional[int]
-    items: typing.Optional[list[kubernetes_asyncio.client.V1KeyToPathDict]]
-    optional: typing.Optional[bool]
-    secretName: typing.Optional[str]
+    defaultMode: int
+    items: list[kubernetes_asyncio.client.V1KeyToPathDict]
+    optional: bool
+    secretName: str

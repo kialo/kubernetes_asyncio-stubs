@@ -17,7 +17,5 @@ class V1DaemonSetUpdateStrategy:
     def to_dict(self) -> V1DaemonSetUpdateStrategyDict: ...
 
 class V1DaemonSetUpdateStrategyDict(typing.TypedDict, total=False):
-    rollingUpdate: typing.Optional[
-        kubernetes_asyncio.client.V1RollingUpdateDaemonSetDict
-    ]
-    type: typing.Optional[str]
+    rollingUpdate: kubernetes_asyncio.client.V1RollingUpdateDaemonSetDict
+    type: str

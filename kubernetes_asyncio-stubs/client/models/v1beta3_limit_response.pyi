@@ -17,5 +17,5 @@ class V1beta3LimitResponse:
     def to_dict(self) -> V1beta3LimitResponseDict: ...
 
 class V1beta3LimitResponseDict(typing.TypedDict, total=False):
-    queuing: typing.Optional[kubernetes_asyncio.client.V1beta3QueuingConfigurationDict]
+    queuing: kubernetes_asyncio.client.V1beta3QueuingConfigurationDict
     type: str

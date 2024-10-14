@@ -15,4 +15,4 @@ class V1alpha1IPAddressSpec:
     def to_dict(self) -> V1alpha1IPAddressSpecDict: ...
 
 class V1alpha1IPAddressSpecDict(typing.TypedDict, total=False):
-    parentRef: typing.Optional[kubernetes_asyncio.client.V1alpha1ParentReferenceDict]
+    parentRef: kubernetes_asyncio.client.V1alpha1ParentReferenceDict

@@ -16,4 +16,4 @@ class V1PodResourceClaim:
 
 class V1PodResourceClaimDict(typing.TypedDict, total=False):
     name: str
-    source: typing.Optional[kubernetes_asyncio.client.V1ClaimSourceDict]
+    source: kubernetes_asyncio.client.V1ClaimSourceDict

@@ -15,4 +15,4 @@ class V1DownwardAPIProjection:
     def to_dict(self) -> V1DownwardAPIProjectionDict: ...
 
 class V1DownwardAPIProjectionDict(typing.TypedDict, total=False):
-    items: typing.Optional[list[kubernetes_asyncio.client.V1DownwardAPIVolumeFileDict]]
+    items: list[kubernetes_asyncio.client.V1DownwardAPIVolumeFileDict]

@@ -39,18 +39,14 @@ class V1NodeStatus:
     def to_dict(self) -> V1NodeStatusDict: ...
 
 class V1NodeStatusDict(typing.TypedDict, total=False):
-    addresses: typing.Optional[list[kubernetes_asyncio.client.V1NodeAddressDict]]
-    allocatable: typing.Optional[dict[str, str]]
-    capacity: typing.Optional[dict[str, str]]
-    conditions: typing.Optional[list[kubernetes_asyncio.client.V1NodeConditionDict]]
-    config: typing.Optional[kubernetes_asyncio.client.V1NodeConfigStatusDict]
-    daemonEndpoints: typing.Optional[
-        kubernetes_asyncio.client.V1NodeDaemonEndpointsDict
-    ]
-    images: typing.Optional[list[kubernetes_asyncio.client.V1ContainerImageDict]]
-    nodeInfo: typing.Optional[kubernetes_asyncio.client.V1NodeSystemInfoDict]
-    phase: typing.Optional[str]
-    volumesAttached: typing.Optional[
-        list[kubernetes_asyncio.client.V1AttachedVolumeDict]
-    ]
-    volumesInUse: typing.Optional[list[str]]
+    addresses: list[kubernetes_asyncio.client.V1NodeAddressDict]
+    allocatable: dict[str, str]
+    capacity: dict[str, str]
+    conditions: list[kubernetes_asyncio.client.V1NodeConditionDict]
+    config: kubernetes_asyncio.client.V1NodeConfigStatusDict
+    daemonEndpoints: kubernetes_asyncio.client.V1NodeDaemonEndpointsDict
+    images: list[kubernetes_asyncio.client.V1ContainerImageDict]
+    nodeInfo: kubernetes_asyncio.client.V1NodeSystemInfoDict
+    phase: str
+    volumesAttached: list[kubernetes_asyncio.client.V1AttachedVolumeDict]
+    volumesInUse: list[str]

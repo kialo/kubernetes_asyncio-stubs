@@ -19,7 +19,7 @@ class V1LifecycleHandler:
     def to_dict(self) -> V1LifecycleHandlerDict: ...
 
 class V1LifecycleHandlerDict(typing.TypedDict, total=False):
-    exec: typing.Optional[kubernetes_asyncio.client.V1ExecActionDict]
-    httpGet: typing.Optional[kubernetes_asyncio.client.V1HTTPGetActionDict]
-    sleep: typing.Optional[kubernetes_asyncio.client.V1SleepActionDict]
-    tcpSocket: typing.Optional[kubernetes_asyncio.client.V1TCPSocketActionDict]
+    exec: kubernetes_asyncio.client.V1ExecActionDict
+    httpGet: kubernetes_asyncio.client.V1HTTPGetActionDict
+    sleep: kubernetes_asyncio.client.V1SleepActionDict
+    tcpSocket: kubernetes_asyncio.client.V1TCPSocketActionDict

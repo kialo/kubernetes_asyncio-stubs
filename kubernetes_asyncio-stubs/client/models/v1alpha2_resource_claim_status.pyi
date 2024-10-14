@@ -25,9 +25,9 @@ class V1alpha2ResourceClaimStatus:
     def to_dict(self) -> V1alpha2ResourceClaimStatusDict: ...
 
 class V1alpha2ResourceClaimStatusDict(typing.TypedDict, total=False):
-    allocation: typing.Optional[kubernetes_asyncio.client.V1alpha2AllocationResultDict]
-    deallocationRequested: typing.Optional[bool]
-    driverName: typing.Optional[str]
-    reservedFor: typing.Optional[
-        list[kubernetes_asyncio.client.V1alpha2ResourceClaimConsumerReferenceDict]
+    allocation: kubernetes_asyncio.client.V1alpha2AllocationResultDict
+    deallocationRequested: bool
+    driverName: str
+    reservedFor: list[
+        kubernetes_asyncio.client.V1alpha2ResourceClaimConsumerReferenceDict
     ]

@@ -25,11 +25,9 @@ class V1CustomResourceDefinitionSpec:
     def to_dict(self) -> V1CustomResourceDefinitionSpecDict: ...
 
 class V1CustomResourceDefinitionSpecDict(typing.TypedDict, total=False):
-    conversion: typing.Optional[
-        kubernetes_asyncio.client.V1CustomResourceConversionDict
-    ]
+    conversion: kubernetes_asyncio.client.V1CustomResourceConversionDict
     group: str
     names: kubernetes_asyncio.client.V1CustomResourceDefinitionNamesDict
-    preserveUnknownFields: typing.Optional[bool]
+    preserveUnknownFields: bool
     scope: str
     versions: list[kubernetes_asyncio.client.V1CustomResourceDefinitionVersionDict]

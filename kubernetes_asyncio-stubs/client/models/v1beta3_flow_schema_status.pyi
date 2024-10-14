@@ -17,6 +17,4 @@ class V1beta3FlowSchemaStatus:
     def to_dict(self) -> V1beta3FlowSchemaStatusDict: ...
 
 class V1beta3FlowSchemaStatusDict(typing.TypedDict, total=False):
-    conditions: typing.Optional[
-        list[kubernetes_asyncio.client.V1beta3FlowSchemaConditionDict]
-    ]
+    conditions: list[kubernetes_asyncio.client.V1beta3FlowSchemaConditionDict]

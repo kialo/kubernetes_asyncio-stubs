@@ -15,5 +15,5 @@ class V1PersistentVolumeClaimTemplate:
     def to_dict(self) -> V1PersistentVolumeClaimTemplateDict: ...
 
 class V1PersistentVolumeClaimTemplateDict(typing.TypedDict, total=False):
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMetaDict]
+    metadata: kubernetes_asyncio.client.V1ObjectMetaDict
     spec: kubernetes_asyncio.client.V1PersistentVolumeClaimSpecDict

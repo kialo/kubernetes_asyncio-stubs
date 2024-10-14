@@ -18,5 +18,5 @@ class V1EnvVar:
 
 class V1EnvVarDict(typing.TypedDict, total=False):
     name: str
-    value: typing.Optional[str]
-    valueFrom: typing.Optional[kubernetes_asyncio.client.V1EnvVarSourceDict]
+    value: str
+    valueFrom: kubernetes_asyncio.client.V1EnvVarSourceDict

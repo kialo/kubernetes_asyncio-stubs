@@ -23,9 +23,9 @@ class V1StatusDetails:
     def to_dict(self) -> V1StatusDetailsDict: ...
 
 class V1StatusDetailsDict(typing.TypedDict, total=False):
-    causes: typing.Optional[list[kubernetes_asyncio.client.V1StatusCauseDict]]
-    group: typing.Optional[str]
-    kind: typing.Optional[str]
-    name: typing.Optional[str]
-    retryAfterSeconds: typing.Optional[int]
-    uid: typing.Optional[str]
+    causes: list[kubernetes_asyncio.client.V1StatusCauseDict]
+    group: str
+    kind: str
+    name: str
+    retryAfterSeconds: int
+    uid: str

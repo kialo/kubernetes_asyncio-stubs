@@ -19,7 +19,7 @@ class V1TokenReviewStatus:
     def to_dict(self) -> V1TokenReviewStatusDict: ...
 
 class V1TokenReviewStatusDict(typing.TypedDict, total=False):
-    audiences: typing.Optional[list[str]]
-    authenticated: typing.Optional[bool]
-    error: typing.Optional[str]
-    user: typing.Optional[kubernetes_asyncio.client.V1UserInfoDict]
+    audiences: list[str]
+    authenticated: bool
+    error: str
+    user: kubernetes_asyncio.client.V1UserInfoDict

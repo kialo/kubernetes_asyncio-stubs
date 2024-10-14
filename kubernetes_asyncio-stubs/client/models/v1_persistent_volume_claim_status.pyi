@@ -35,15 +35,11 @@ class V1PersistentVolumeClaimStatus:
     def to_dict(self) -> V1PersistentVolumeClaimStatusDict: ...
 
 class V1PersistentVolumeClaimStatusDict(typing.TypedDict, total=False):
-    accessModes: typing.Optional[list[str]]
-    allocatedResourceStatuses: typing.Optional[dict[str, str]]
-    allocatedResources: typing.Optional[dict[str, str]]
-    capacity: typing.Optional[dict[str, str]]
-    conditions: typing.Optional[
-        list[kubernetes_asyncio.client.V1PersistentVolumeClaimConditionDict]
-    ]
-    currentVolumeAttributesClassName: typing.Optional[str]
-    modifyVolumeStatus: typing.Optional[
-        kubernetes_asyncio.client.V1ModifyVolumeStatusDict
-    ]
-    phase: typing.Optional[str]
+    accessModes: list[str]
+    allocatedResourceStatuses: dict[str, str]
+    allocatedResources: dict[str, str]
+    capacity: dict[str, str]
+    conditions: list[kubernetes_asyncio.client.V1PersistentVolumeClaimConditionDict]
+    currentVolumeAttributesClassName: str
+    modifyVolumeStatus: kubernetes_asyncio.client.V1ModifyVolumeStatusDict
+    phase: str

@@ -25,9 +25,7 @@ class V1DownwardAPIVolumeFile:
     def to_dict(self) -> V1DownwardAPIVolumeFileDict: ...
 
 class V1DownwardAPIVolumeFileDict(typing.TypedDict, total=False):
-    fieldRef: typing.Optional[kubernetes_asyncio.client.V1ObjectFieldSelectorDict]
-    mode: typing.Optional[int]
+    fieldRef: kubernetes_asyncio.client.V1ObjectFieldSelectorDict
+    mode: int
     path: str
-    resourceFieldRef: typing.Optional[
-        kubernetes_asyncio.client.V1ResourceFieldSelectorDict
-    ]
+    resourceFieldRef: kubernetes_asyncio.client.V1ResourceFieldSelectorDict

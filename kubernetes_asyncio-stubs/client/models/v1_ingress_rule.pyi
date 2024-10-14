@@ -15,5 +15,5 @@ class V1IngressRule:
     def to_dict(self) -> V1IngressRuleDict: ...
 
 class V1IngressRuleDict(typing.TypedDict, total=False):
-    host: typing.Optional[str]
-    http: typing.Optional[kubernetes_asyncio.client.V1HTTPIngressRuleValueDict]
+    host: str
+    http: kubernetes_asyncio.client.V1HTTPIngressRuleValueDict

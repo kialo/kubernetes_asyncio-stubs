@@ -29,12 +29,10 @@ class V1APIServiceSpec:
     def to_dict(self) -> V1APIServiceSpecDict: ...
 
 class V1APIServiceSpecDict(typing.TypedDict, total=False):
-    caBundle: typing.Optional[str]
-    group: typing.Optional[str]
+    caBundle: str
+    group: str
     groupPriorityMinimum: int
-    insecureSkipTLSVerify: typing.Optional[bool]
-    service: typing.Optional[
-        kubernetes_asyncio.client.ApiregistrationV1ServiceReferenceDict
-    ]
-    version: typing.Optional[str]
+    insecureSkipTLSVerify: bool
+    service: kubernetes_asyncio.client.ApiregistrationV1ServiceReferenceDict
+    version: str
     versionPriority: int

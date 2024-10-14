@@ -21,7 +21,7 @@ class V1CSINodeDriver:
     def to_dict(self) -> V1CSINodeDriverDict: ...
 
 class V1CSINodeDriverDict(typing.TypedDict, total=False):
-    allocatable: typing.Optional[kubernetes_asyncio.client.V1VolumeNodeResourcesDict]
+    allocatable: kubernetes_asyncio.client.V1VolumeNodeResourcesDict
     name: str
     nodeID: str
-    topologyKeys: typing.Optional[list[str]]
+    topologyKeys: list[str]

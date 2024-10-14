@@ -41,16 +41,14 @@ class V1SecurityContext:
     def to_dict(self) -> V1SecurityContextDict: ...
 
 class V1SecurityContextDict(typing.TypedDict, total=False):
-    allowPrivilegeEscalation: typing.Optional[bool]
-    capabilities: typing.Optional[kubernetes_asyncio.client.V1CapabilitiesDict]
-    privileged: typing.Optional[bool]
-    procMount: typing.Optional[str]
-    readOnlyRootFilesystem: typing.Optional[bool]
-    runAsGroup: typing.Optional[int]
-    runAsNonRoot: typing.Optional[bool]
-    runAsUser: typing.Optional[int]
-    seLinuxOptions: typing.Optional[kubernetes_asyncio.client.V1SELinuxOptionsDict]
-    seccompProfile: typing.Optional[kubernetes_asyncio.client.V1SeccompProfileDict]
-    windowsOptions: typing.Optional[
-        kubernetes_asyncio.client.V1WindowsSecurityContextOptionsDict
-    ]
+    allowPrivilegeEscalation: bool
+    capabilities: kubernetes_asyncio.client.V1CapabilitiesDict
+    privileged: bool
+    procMount: str
+    readOnlyRootFilesystem: bool
+    runAsGroup: int
+    runAsNonRoot: bool
+    runAsUser: int
+    seLinuxOptions: kubernetes_asyncio.client.V1SELinuxOptionsDict
+    seccompProfile: kubernetes_asyncio.client.V1SeccompProfileDict
+    windowsOptions: kubernetes_asyncio.client.V1WindowsSecurityContextOptionsDict

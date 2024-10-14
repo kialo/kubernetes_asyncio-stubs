@@ -39,16 +39,10 @@ class V1beta1ValidatingAdmissionPolicySpec:
     def to_dict(self) -> V1beta1ValidatingAdmissionPolicySpecDict: ...
 
 class V1beta1ValidatingAdmissionPolicySpecDict(typing.TypedDict, total=False):
-    auditAnnotations: typing.Optional[
-        list[kubernetes_asyncio.client.V1beta1AuditAnnotationDict]
-    ]
-    failurePolicy: typing.Optional[str]
-    matchConditions: typing.Optional[
-        list[kubernetes_asyncio.client.V1beta1MatchConditionDict]
-    ]
-    matchConstraints: typing.Optional[
-        kubernetes_asyncio.client.V1beta1MatchResourcesDict
-    ]
-    paramKind: typing.Optional[kubernetes_asyncio.client.V1beta1ParamKindDict]
-    validations: typing.Optional[list[kubernetes_asyncio.client.V1beta1ValidationDict]]
-    variables: typing.Optional[list[kubernetes_asyncio.client.V1beta1VariableDict]]
+    auditAnnotations: list[kubernetes_asyncio.client.V1beta1AuditAnnotationDict]
+    failurePolicy: str
+    matchConditions: list[kubernetes_asyncio.client.V1beta1MatchConditionDict]
+    matchConstraints: kubernetes_asyncio.client.V1beta1MatchResourcesDict
+    paramKind: kubernetes_asyncio.client.V1beta1ParamKindDict
+    validations: list[kubernetes_asyncio.client.V1beta1ValidationDict]
+    variables: list[kubernetes_asyncio.client.V1beta1VariableDict]

@@ -16,4 +16,4 @@ class V1CustomResourceConversion:
 
 class V1CustomResourceConversionDict(typing.TypedDict, total=False):
     strategy: str
-    webhook: typing.Optional[kubernetes_asyncio.client.V1WebhookConversionDict]
+    webhook: kubernetes_asyncio.client.V1WebhookConversionDict

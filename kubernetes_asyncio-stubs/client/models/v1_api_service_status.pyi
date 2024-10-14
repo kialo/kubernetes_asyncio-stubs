@@ -15,6 +15,4 @@ class V1APIServiceStatus:
     def to_dict(self) -> V1APIServiceStatusDict: ...
 
 class V1APIServiceStatusDict(typing.TypedDict, total=False):
-    conditions: typing.Optional[
-        list[kubernetes_asyncio.client.V1APIServiceConditionDict]
-    ]
+    conditions: list[kubernetes_asyncio.client.V1APIServiceConditionDict]

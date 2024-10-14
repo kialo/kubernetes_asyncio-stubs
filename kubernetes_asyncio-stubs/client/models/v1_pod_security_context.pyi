@@ -39,15 +39,13 @@ class V1PodSecurityContext:
     def to_dict(self) -> V1PodSecurityContextDict: ...
 
 class V1PodSecurityContextDict(typing.TypedDict, total=False):
-    fsGroup: typing.Optional[int]
-    fsGroupChangePolicy: typing.Optional[str]
-    runAsGroup: typing.Optional[int]
-    runAsNonRoot: typing.Optional[bool]
-    runAsUser: typing.Optional[int]
-    seLinuxOptions: typing.Optional[kubernetes_asyncio.client.V1SELinuxOptionsDict]
-    seccompProfile: typing.Optional[kubernetes_asyncio.client.V1SeccompProfileDict]
-    supplementalGroups: typing.Optional[list[int]]
-    sysctls: typing.Optional[list[kubernetes_asyncio.client.V1SysctlDict]]
-    windowsOptions: typing.Optional[
-        kubernetes_asyncio.client.V1WindowsSecurityContextOptionsDict
-    ]
+    fsGroup: int
+    fsGroupChangePolicy: str
+    runAsGroup: int
+    runAsNonRoot: bool
+    runAsUser: int
+    seLinuxOptions: kubernetes_asyncio.client.V1SELinuxOptionsDict
+    seccompProfile: kubernetes_asyncio.client.V1SeccompProfileDict
+    supplementalGroups: list[int]
+    sysctls: list[kubernetes_asyncio.client.V1SysctlDict]
+    windowsOptions: kubernetes_asyncio.client.V1WindowsSecurityContextOptionsDict

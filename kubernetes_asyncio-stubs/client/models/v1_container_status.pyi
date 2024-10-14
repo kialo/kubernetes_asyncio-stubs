@@ -35,14 +35,14 @@ class V1ContainerStatus:
     def to_dict(self) -> V1ContainerStatusDict: ...
 
 class V1ContainerStatusDict(typing.TypedDict, total=False):
-    allocatedResources: typing.Optional[dict[str, str]]
-    containerID: typing.Optional[str]
+    allocatedResources: dict[str, str]
+    containerID: str
     image: str
     imageID: str
-    lastState: typing.Optional[kubernetes_asyncio.client.V1ContainerStateDict]
+    lastState: kubernetes_asyncio.client.V1ContainerStateDict
     name: str
     ready: bool
-    resources: typing.Optional[kubernetes_asyncio.client.V1ResourceRequirementsDict]
+    resources: kubernetes_asyncio.client.V1ResourceRequirementsDict
     restartCount: int
-    started: typing.Optional[bool]
-    state: typing.Optional[kubernetes_asyncio.client.V1ContainerStateDict]
+    started: bool
+    state: kubernetes_asyncio.client.V1ContainerStateDict

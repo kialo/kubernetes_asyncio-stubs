@@ -41,17 +41,17 @@ class V1JobSpec:
     def to_dict(self) -> V1JobSpecDict: ...
 
 class V1JobSpecDict(typing.TypedDict, total=False):
-    activeDeadlineSeconds: typing.Optional[int]
-    backoffLimit: typing.Optional[int]
-    backoffLimitPerIndex: typing.Optional[int]
-    completionMode: typing.Optional[str]
-    completions: typing.Optional[int]
-    manualSelector: typing.Optional[bool]
-    maxFailedIndexes: typing.Optional[int]
-    parallelism: typing.Optional[int]
-    podFailurePolicy: typing.Optional[kubernetes_asyncio.client.V1PodFailurePolicyDict]
-    podReplacementPolicy: typing.Optional[str]
-    selector: typing.Optional[kubernetes_asyncio.client.V1LabelSelectorDict]
-    suspend: typing.Optional[bool]
+    activeDeadlineSeconds: int
+    backoffLimit: int
+    backoffLimitPerIndex: int
+    completionMode: str
+    completions: int
+    manualSelector: bool
+    maxFailedIndexes: int
+    parallelism: int
+    podFailurePolicy: kubernetes_asyncio.client.V1PodFailurePolicyDict
+    podReplacementPolicy: str
+    selector: kubernetes_asyncio.client.V1LabelSelectorDict
+    suspend: bool
     template: kubernetes_asyncio.client.V1PodTemplateSpecDict
-    ttlSecondsAfterFinished: typing.Optional[int]
+    ttlSecondsAfterFinished: int

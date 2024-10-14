@@ -21,8 +21,8 @@ class V1alpha2ResourceClaimSpec:
     def to_dict(self) -> V1alpha2ResourceClaimSpecDict: ...
 
 class V1alpha2ResourceClaimSpecDict(typing.TypedDict, total=False):
-    allocationMode: typing.Optional[str]
-    parametersRef: typing.Optional[
+    allocationMode: str
+    parametersRef: (
         kubernetes_asyncio.client.V1alpha2ResourceClaimParametersReferenceDict
-    ]
+    )
     resourceClassName: str

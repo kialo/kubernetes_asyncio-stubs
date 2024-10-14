@@ -23,8 +23,6 @@ class V1ContainerState:
     def to_dict(self) -> V1ContainerStateDict: ...
 
 class V1ContainerStateDict(typing.TypedDict, total=False):
-    running: typing.Optional[kubernetes_asyncio.client.V1ContainerStateRunningDict]
-    terminated: typing.Optional[
-        kubernetes_asyncio.client.V1ContainerStateTerminatedDict
-    ]
-    waiting: typing.Optional[kubernetes_asyncio.client.V1ContainerStateWaitingDict]
+    running: kubernetes_asyncio.client.V1ContainerStateRunningDict
+    terminated: kubernetes_asyncio.client.V1ContainerStateTerminatedDict
+    waiting: kubernetes_asyncio.client.V1ContainerStateWaitingDict

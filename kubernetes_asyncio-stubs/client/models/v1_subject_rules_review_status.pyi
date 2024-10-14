@@ -19,7 +19,7 @@ class V1SubjectRulesReviewStatus:
     def to_dict(self) -> V1SubjectRulesReviewStatusDict: ...
 
 class V1SubjectRulesReviewStatusDict(typing.TypedDict, total=False):
-    evaluationError: typing.Optional[str]
+    evaluationError: str
     incomplete: bool
     nonResourceRules: list[kubernetes_asyncio.client.V1NonResourceRuleDict]
     resourceRules: list[kubernetes_asyncio.client.V1ResourceRuleDict]

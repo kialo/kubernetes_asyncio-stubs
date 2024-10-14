@@ -27,10 +27,10 @@ class V1NodeSpec:
     def to_dict(self) -> V1NodeSpecDict: ...
 
 class V1NodeSpecDict(typing.TypedDict, total=False):
-    configSource: typing.Optional[kubernetes_asyncio.client.V1NodeConfigSourceDict]
-    externalID: typing.Optional[str]
-    podCIDR: typing.Optional[str]
-    podCIDRs: typing.Optional[list[str]]
-    providerID: typing.Optional[str]
-    taints: typing.Optional[list[kubernetes_asyncio.client.V1TaintDict]]
-    unschedulable: typing.Optional[bool]
+    configSource: kubernetes_asyncio.client.V1NodeConfigSourceDict
+    externalID: str
+    podCIDR: str
+    podCIDRs: list[str]
+    providerID: str
+    taints: list[kubernetes_asyncio.client.V1TaintDict]
+    unschedulable: bool

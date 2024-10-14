@@ -17,5 +17,5 @@ class V1Scheduling:
     def to_dict(self) -> V1SchedulingDict: ...
 
 class V1SchedulingDict(typing.TypedDict, total=False):
-    nodeSelector: typing.Optional[dict[str, str]]
-    tolerations: typing.Optional[list[kubernetes_asyncio.client.V1TolerationDict]]
+    nodeSelector: dict[str, str]
+    tolerations: list[kubernetes_asyncio.client.V1TolerationDict]

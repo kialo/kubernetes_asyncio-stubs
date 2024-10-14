@@ -17,7 +17,5 @@ class V1DeploymentStrategy:
     def to_dict(self) -> V1DeploymentStrategyDict: ...
 
 class V1DeploymentStrategyDict(typing.TypedDict, total=False):
-    rollingUpdate: typing.Optional[
-        kubernetes_asyncio.client.V1RollingUpdateDeploymentDict
-    ]
-    type: typing.Optional[str]
+    rollingUpdate: kubernetes_asyncio.client.V1RollingUpdateDeploymentDict
+    type: str

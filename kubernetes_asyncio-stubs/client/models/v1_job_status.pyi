@@ -40,16 +40,14 @@ class V1JobStatus:
     def to_dict(self) -> V1JobStatusDict: ...
 
 class V1JobStatusDict(typing.TypedDict, total=False):
-    active: typing.Optional[int]
-    completedIndexes: typing.Optional[str]
-    completionTime: typing.Optional[datetime.datetime]
-    conditions: typing.Optional[list[kubernetes_asyncio.client.V1JobConditionDict]]
-    failed: typing.Optional[int]
-    failedIndexes: typing.Optional[str]
-    ready: typing.Optional[int]
-    startTime: typing.Optional[datetime.datetime]
-    succeeded: typing.Optional[int]
-    terminating: typing.Optional[int]
-    uncountedTerminatedPods: typing.Optional[
-        kubernetes_asyncio.client.V1UncountedTerminatedPodsDict
-    ]
+    active: int
+    completedIndexes: str
+    completionTime: datetime.datetime
+    conditions: list[kubernetes_asyncio.client.V1JobConditionDict]
+    failed: int
+    failedIndexes: str
+    ready: int
+    startTime: datetime.datetime
+    succeeded: int
+    terminating: int
+    uncountedTerminatedPods: kubernetes_asyncio.client.V1UncountedTerminatedPodsDict

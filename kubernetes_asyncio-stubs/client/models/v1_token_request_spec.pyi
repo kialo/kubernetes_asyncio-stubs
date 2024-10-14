@@ -20,7 +20,5 @@ class V1TokenRequestSpec:
 
 class V1TokenRequestSpecDict(typing.TypedDict, total=False):
     audiences: list[str]
-    boundObjectRef: typing.Optional[
-        kubernetes_asyncio.client.V1BoundObjectReferenceDict
-    ]
-    expirationSeconds: typing.Optional[int]
+    boundObjectRef: kubernetes_asyncio.client.V1BoundObjectReferenceDict
+    expirationSeconds: int

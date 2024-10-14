@@ -17,6 +17,6 @@ class V1SecretProjection:
     def to_dict(self) -> V1SecretProjectionDict: ...
 
 class V1SecretProjectionDict(typing.TypedDict, total=False):
-    items: typing.Optional[list[kubernetes_asyncio.client.V1KeyToPathDict]]
-    name: typing.Optional[str]
-    optional: typing.Optional[bool]
+    items: list[kubernetes_asyncio.client.V1KeyToPathDict]
+    name: str
+    optional: bool

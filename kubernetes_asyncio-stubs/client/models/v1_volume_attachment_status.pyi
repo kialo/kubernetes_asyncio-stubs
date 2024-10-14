@@ -19,7 +19,7 @@ class V1VolumeAttachmentStatus:
     def to_dict(self) -> V1VolumeAttachmentStatusDict: ...
 
 class V1VolumeAttachmentStatusDict(typing.TypedDict, total=False):
-    attachError: typing.Optional[kubernetes_asyncio.client.V1VolumeErrorDict]
+    attachError: kubernetes_asyncio.client.V1VolumeErrorDict
     attached: bool
-    attachmentMetadata: typing.Optional[dict[str, str]]
-    detachError: typing.Optional[kubernetes_asyncio.client.V1VolumeErrorDict]
+    attachmentMetadata: dict[str, str]
+    detachError: kubernetes_asyncio.client.V1VolumeErrorDict

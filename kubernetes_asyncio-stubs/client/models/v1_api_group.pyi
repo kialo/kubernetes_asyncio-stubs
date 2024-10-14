@@ -3,8 +3,8 @@ import kubernetes_asyncio.client.api_client
 import typing
 
 class V1APIGroup:
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
+    api_version: str
+    kind: str
     name: str
     preferred_version: typing.Optional[
         kubernetes_asyncio.client.V1GroupVersionForDiscovery
@@ -31,13 +31,11 @@ class V1APIGroup:
     def to_dict(self) -> V1APIGroupDict: ...
 
 class V1APIGroupDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
+    apiVersion: str
+    kind: str
     name: str
-    preferredVersion: typing.Optional[
-        kubernetes_asyncio.client.V1GroupVersionForDiscoveryDict
-    ]
-    serverAddressByClientCIDRs: typing.Optional[
-        list[kubernetes_asyncio.client.V1ServerAddressByClientCIDRDict]
+    preferredVersion: kubernetes_asyncio.client.V1GroupVersionForDiscoveryDict
+    serverAddressByClientCIDRs: list[
+        kubernetes_asyncio.client.V1ServerAddressByClientCIDRDict
     ]
     versions: list[kubernetes_asyncio.client.V1GroupVersionForDiscoveryDict]

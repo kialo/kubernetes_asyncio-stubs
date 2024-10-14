@@ -23,8 +23,6 @@ class V1alpha2AllocationResult:
     def to_dict(self) -> V1alpha2AllocationResultDict: ...
 
 class V1alpha2AllocationResultDict(typing.TypedDict, total=False):
-    availableOnNodes: typing.Optional[kubernetes_asyncio.client.V1NodeSelectorDict]
-    resourceHandles: typing.Optional[
-        list[kubernetes_asyncio.client.V1alpha2ResourceHandleDict]
-    ]
-    shareable: typing.Optional[bool]
+    availableOnNodes: kubernetes_asyncio.client.V1NodeSelectorDict
+    resourceHandles: list[kubernetes_asyncio.client.V1alpha2ResourceHandleDict]
+    shareable: bool

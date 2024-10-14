@@ -13,5 +13,5 @@ class V1alpha2ResourceHandle:
     def to_dict(self) -> V1alpha2ResourceHandleDict: ...
 
 class V1alpha2ResourceHandleDict(typing.TypedDict, total=False):
-    data: typing.Optional[str]
-    driverName: typing.Optional[str]
+    data: str
+    driverName: str

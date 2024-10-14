@@ -3,10 +3,10 @@ import kubernetes_asyncio.client.api_client
 import typing
 
 class EventsV1EventList:
-    api_version: typing.Optional[str]
+    api_version: str
     items: list[kubernetes_asyncio.client.EventsV1Event]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ListMeta]
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ListMeta
 
     def __init__(
         self,
@@ -19,7 +19,7 @@ class EventsV1EventList:
     def to_dict(self) -> EventsV1EventListDict: ...
 
 class EventsV1EventListDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     items: list[kubernetes_asyncio.client.EventsV1EventDict]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ListMetaDict]
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ListMetaDict

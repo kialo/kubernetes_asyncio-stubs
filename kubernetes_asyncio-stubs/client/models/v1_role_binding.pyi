@@ -3,9 +3,9 @@ import kubernetes_asyncio.client.api_client
 import typing
 
 class V1RoleBinding:
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMeta]
+    api_version: str
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ObjectMeta
     role_ref: kubernetes_asyncio.client.V1RoleRef
     subjects: typing.Optional[list[kubernetes_asyncio.client.RbacV1Subject]]
 
@@ -21,8 +21,8 @@ class V1RoleBinding:
     def to_dict(self) -> V1RoleBindingDict: ...
 
 class V1RoleBindingDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMetaDict]
+    apiVersion: str
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ObjectMetaDict
     roleRef: kubernetes_asyncio.client.V1RoleRefDict
-    subjects: typing.Optional[list[kubernetes_asyncio.client.RbacV1SubjectDict]]
+    subjects: list[kubernetes_asyncio.client.RbacV1SubjectDict]

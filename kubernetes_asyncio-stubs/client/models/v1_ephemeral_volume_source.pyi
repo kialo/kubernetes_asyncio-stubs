@@ -17,6 +17,4 @@ class V1EphemeralVolumeSource:
     def to_dict(self) -> V1EphemeralVolumeSourceDict: ...
 
 class V1EphemeralVolumeSourceDict(typing.TypedDict, total=False):
-    volumeClaimTemplate: typing.Optional[
-        kubernetes_asyncio.client.V1PersistentVolumeClaimTemplateDict
-    ]
+    volumeClaimTemplate: kubernetes_asyncio.client.V1PersistentVolumeClaimTemplateDict

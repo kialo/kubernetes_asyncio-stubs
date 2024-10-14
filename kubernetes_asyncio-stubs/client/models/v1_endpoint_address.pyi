@@ -19,7 +19,7 @@ class V1EndpointAddress:
     def to_dict(self) -> V1EndpointAddressDict: ...
 
 class V1EndpointAddressDict(typing.TypedDict, total=False):
-    hostname: typing.Optional[str]
+    hostname: str
     ip: str
-    nodeName: typing.Optional[str]
-    targetRef: typing.Optional[kubernetes_asyncio.client.V1ObjectReferenceDict]
+    nodeName: str
+    targetRef: kubernetes_asyncio.client.V1ObjectReferenceDict

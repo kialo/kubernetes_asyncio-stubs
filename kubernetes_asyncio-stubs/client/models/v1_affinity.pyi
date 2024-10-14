@@ -19,6 +19,6 @@ class V1Affinity:
     def to_dict(self) -> V1AffinityDict: ...
 
 class V1AffinityDict(typing.TypedDict, total=False):
-    nodeAffinity: typing.Optional[kubernetes_asyncio.client.V1NodeAffinityDict]
-    podAffinity: typing.Optional[kubernetes_asyncio.client.V1PodAffinityDict]
-    podAntiAffinity: typing.Optional[kubernetes_asyncio.client.V1PodAntiAffinityDict]
+    nodeAffinity: kubernetes_asyncio.client.V1NodeAffinityDict
+    podAffinity: kubernetes_asyncio.client.V1PodAffinityDict
+    podAntiAffinity: kubernetes_asyncio.client.V1PodAntiAffinityDict

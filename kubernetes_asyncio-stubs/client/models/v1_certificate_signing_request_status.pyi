@@ -19,7 +19,5 @@ class V1CertificateSigningRequestStatus:
     def to_dict(self) -> V1CertificateSigningRequestStatusDict: ...
 
 class V1CertificateSigningRequestStatusDict(typing.TypedDict, total=False):
-    certificate: typing.Optional[str]
-    conditions: typing.Optional[
-        list[kubernetes_asyncio.client.V1CertificateSigningRequestConditionDict]
-    ]
+    certificate: str
+    conditions: list[kubernetes_asyncio.client.V1CertificateSigningRequestConditionDict]

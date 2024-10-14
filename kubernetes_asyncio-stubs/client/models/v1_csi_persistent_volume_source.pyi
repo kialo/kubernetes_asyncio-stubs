@@ -47,21 +47,13 @@ class V1CSIPersistentVolumeSource:
     def to_dict(self) -> V1CSIPersistentVolumeSourceDict: ...
 
 class V1CSIPersistentVolumeSourceDict(typing.TypedDict, total=False):
-    controllerExpandSecretRef: typing.Optional[
-        kubernetes_asyncio.client.V1SecretReferenceDict
-    ]
-    controllerPublishSecretRef: typing.Optional[
-        kubernetes_asyncio.client.V1SecretReferenceDict
-    ]
+    controllerExpandSecretRef: kubernetes_asyncio.client.V1SecretReferenceDict
+    controllerPublishSecretRef: kubernetes_asyncio.client.V1SecretReferenceDict
     driver: str
-    fsType: typing.Optional[str]
-    nodeExpandSecretRef: typing.Optional[
-        kubernetes_asyncio.client.V1SecretReferenceDict
-    ]
-    nodePublishSecretRef: typing.Optional[
-        kubernetes_asyncio.client.V1SecretReferenceDict
-    ]
-    nodeStageSecretRef: typing.Optional[kubernetes_asyncio.client.V1SecretReferenceDict]
-    readOnly: typing.Optional[bool]
-    volumeAttributes: typing.Optional[dict[str, str]]
+    fsType: str
+    nodeExpandSecretRef: kubernetes_asyncio.client.V1SecretReferenceDict
+    nodePublishSecretRef: kubernetes_asyncio.client.V1SecretReferenceDict
+    nodeStageSecretRef: kubernetes_asyncio.client.V1SecretReferenceDict
+    readOnly: bool
+    volumeAttributes: dict[str, str]
     volumeHandle: str

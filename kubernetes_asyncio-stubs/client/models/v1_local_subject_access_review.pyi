@@ -3,11 +3,11 @@ import kubernetes_asyncio.client.api_client
 import typing
 
 class V1LocalSubjectAccessReview:
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMeta]
+    api_version: str
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ObjectMeta
     spec: kubernetes_asyncio.client.V1SubjectAccessReviewSpec
-    status: typing.Optional[kubernetes_asyncio.client.V1SubjectAccessReviewStatus]
+    status: kubernetes_asyncio.client.V1SubjectAccessReviewStatus
 
     def __init__(
         self,
@@ -23,8 +23,8 @@ class V1LocalSubjectAccessReview:
     def to_dict(self) -> V1LocalSubjectAccessReviewDict: ...
 
 class V1LocalSubjectAccessReviewDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMetaDict]
+    apiVersion: str
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ObjectMetaDict
     spec: kubernetes_asyncio.client.V1SubjectAccessReviewSpecDict
-    status: typing.Optional[kubernetes_asyncio.client.V1SubjectAccessReviewStatusDict]
+    status: kubernetes_asyncio.client.V1SubjectAccessReviewStatusDict

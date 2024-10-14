@@ -21,7 +21,7 @@ class V1NodeConfigStatus:
     def to_dict(self) -> V1NodeConfigStatusDict: ...
 
 class V1NodeConfigStatusDict(typing.TypedDict, total=False):
-    active: typing.Optional[kubernetes_asyncio.client.V1NodeConfigSourceDict]
-    assigned: typing.Optional[kubernetes_asyncio.client.V1NodeConfigSourceDict]
-    error: typing.Optional[str]
-    lastKnownGood: typing.Optional[kubernetes_asyncio.client.V1NodeConfigSourceDict]
+    active: kubernetes_asyncio.client.V1NodeConfigSourceDict
+    assigned: kubernetes_asyncio.client.V1NodeConfigSourceDict
+    error: str
+    lastKnownGood: kubernetes_asyncio.client.V1NodeConfigSourceDict

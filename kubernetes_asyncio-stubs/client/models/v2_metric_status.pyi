@@ -31,11 +31,9 @@ class V2MetricStatus:
     def to_dict(self) -> V2MetricStatusDict: ...
 
 class V2MetricStatusDict(typing.TypedDict, total=False):
-    containerResource: typing.Optional[
-        kubernetes_asyncio.client.V2ContainerResourceMetricStatusDict
-    ]
-    external: typing.Optional[kubernetes_asyncio.client.V2ExternalMetricStatusDict]
-    object: typing.Optional[kubernetes_asyncio.client.V2ObjectMetricStatusDict]
-    pods: typing.Optional[kubernetes_asyncio.client.V2PodsMetricStatusDict]
-    resource: typing.Optional[kubernetes_asyncio.client.V2ResourceMetricStatusDict]
+    containerResource: kubernetes_asyncio.client.V2ContainerResourceMetricStatusDict
+    external: kubernetes_asyncio.client.V2ExternalMetricStatusDict
+    object: kubernetes_asyncio.client.V2ObjectMetricStatusDict
+    pods: kubernetes_asyncio.client.V2PodsMetricStatusDict
+    resource: kubernetes_asyncio.client.V2ResourceMetricStatusDict
     type: str

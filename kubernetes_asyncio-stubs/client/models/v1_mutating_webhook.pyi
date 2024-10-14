@@ -47,15 +47,13 @@ class V1MutatingWebhookDict(typing.TypedDict, total=False):
     clientConfig: (
         kubernetes_asyncio.client.AdmissionregistrationV1WebhookClientConfigDict
     )
-    failurePolicy: typing.Optional[str]
-    matchConditions: typing.Optional[
-        list[kubernetes_asyncio.client.V1MatchConditionDict]
-    ]
-    matchPolicy: typing.Optional[str]
+    failurePolicy: str
+    matchConditions: list[kubernetes_asyncio.client.V1MatchConditionDict]
+    matchPolicy: str
     name: str
-    namespaceSelector: typing.Optional[kubernetes_asyncio.client.V1LabelSelectorDict]
-    objectSelector: typing.Optional[kubernetes_asyncio.client.V1LabelSelectorDict]
-    reinvocationPolicy: typing.Optional[str]
-    rules: typing.Optional[list[kubernetes_asyncio.client.V1RuleWithOperationsDict]]
+    namespaceSelector: kubernetes_asyncio.client.V1LabelSelectorDict
+    objectSelector: kubernetes_asyncio.client.V1LabelSelectorDict
+    reinvocationPolicy: str
+    rules: list[kubernetes_asyncio.client.V1RuleWithOperationsDict]
     sideEffects: str
-    timeoutSeconds: typing.Optional[int]
+    timeoutSeconds: int

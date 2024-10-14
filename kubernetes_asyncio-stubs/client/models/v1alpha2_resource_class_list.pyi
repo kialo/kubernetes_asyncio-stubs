@@ -3,10 +3,10 @@ import kubernetes_asyncio.client.api_client
 import typing
 
 class V1alpha2ResourceClassList:
-    api_version: typing.Optional[str]
+    api_version: str
     items: list[kubernetes_asyncio.client.V1alpha2ResourceClass]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ListMeta]
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ListMeta
 
     def __init__(
         self,
@@ -19,7 +19,7 @@ class V1alpha2ResourceClassList:
     def to_dict(self) -> V1alpha2ResourceClassListDict: ...
 
 class V1alpha2ResourceClassListDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     items: list[kubernetes_asyncio.client.V1alpha2ResourceClassDict]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ListMetaDict]
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ListMetaDict

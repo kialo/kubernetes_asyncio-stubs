@@ -13,5 +13,5 @@ class V1HostAlias:
     def to_dict(self) -> V1HostAliasDict: ...
 
 class V1HostAliasDict(typing.TypedDict, total=False):
-    hostnames: typing.Optional[list[str]]
-    ip: typing.Optional[str]
+    hostnames: list[str]
+    ip: str

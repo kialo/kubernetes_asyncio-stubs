@@ -17,6 +17,6 @@ class V1ResourceRequirements:
     def to_dict(self) -> V1ResourceRequirementsDict: ...
 
 class V1ResourceRequirementsDict(typing.TypedDict, total=False):
-    claims: typing.Optional[list[kubernetes_asyncio.client.V1ResourceClaimDict]]
-    limits: typing.Optional[dict[str, str]]
-    requests: typing.Optional[dict[str, str]]
+    claims: list[kubernetes_asyncio.client.V1ResourceClaimDict]
+    limits: dict[str, str]
+    requests: dict[str, str]

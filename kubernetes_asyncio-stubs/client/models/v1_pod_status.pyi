@@ -62,27 +62,19 @@ class V1PodStatus:
     def to_dict(self) -> V1PodStatusDict: ...
 
 class V1PodStatusDict(typing.TypedDict, total=False):
-    conditions: typing.Optional[list[kubernetes_asyncio.client.V1PodConditionDict]]
-    containerStatuses: typing.Optional[
-        list[kubernetes_asyncio.client.V1ContainerStatusDict]
-    ]
-    ephemeralContainerStatuses: typing.Optional[
-        list[kubernetes_asyncio.client.V1ContainerStatusDict]
-    ]
-    hostIP: typing.Optional[str]
-    hostIPs: typing.Optional[list[kubernetes_asyncio.client.V1HostIPDict]]
-    initContainerStatuses: typing.Optional[
-        list[kubernetes_asyncio.client.V1ContainerStatusDict]
-    ]
-    message: typing.Optional[str]
-    nominatedNodeName: typing.Optional[str]
-    phase: typing.Optional[str]
-    podIP: typing.Optional[str]
-    podIPs: typing.Optional[list[kubernetes_asyncio.client.V1PodIPDict]]
-    qosClass: typing.Optional[str]
-    reason: typing.Optional[str]
-    resize: typing.Optional[str]
-    resourceClaimStatuses: typing.Optional[
-        list[kubernetes_asyncio.client.V1PodResourceClaimStatusDict]
-    ]
-    startTime: typing.Optional[datetime.datetime]
+    conditions: list[kubernetes_asyncio.client.V1PodConditionDict]
+    containerStatuses: list[kubernetes_asyncio.client.V1ContainerStatusDict]
+    ephemeralContainerStatuses: list[kubernetes_asyncio.client.V1ContainerStatusDict]
+    hostIP: str
+    hostIPs: list[kubernetes_asyncio.client.V1HostIPDict]
+    initContainerStatuses: list[kubernetes_asyncio.client.V1ContainerStatusDict]
+    message: str
+    nominatedNodeName: str
+    phase: str
+    podIP: str
+    podIPs: list[kubernetes_asyncio.client.V1PodIPDict]
+    qosClass: str
+    reason: str
+    resize: str
+    resourceClaimStatuses: list[kubernetes_asyncio.client.V1PodResourceClaimStatusDict]
+    startTime: datetime.datetime

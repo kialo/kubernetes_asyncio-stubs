@@ -7,9 +7,9 @@ class V1StorageClass:
     allowed_topologies: typing.Optional[
         list[kubernetes_asyncio.client.V1TopologySelectorTerm]
     ]
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMeta]
+    api_version: str
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ObjectMeta
     mount_options: typing.Optional[list[str]]
     parameters: typing.Optional[dict[str, str]]
     provisioner: str
@@ -35,15 +35,13 @@ class V1StorageClass:
     def to_dict(self) -> V1StorageClassDict: ...
 
 class V1StorageClassDict(typing.TypedDict, total=False):
-    allowVolumeExpansion: typing.Optional[bool]
-    allowedTopologies: typing.Optional[
-        list[kubernetes_asyncio.client.V1TopologySelectorTermDict]
-    ]
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMetaDict]
-    mountOptions: typing.Optional[list[str]]
-    parameters: typing.Optional[dict[str, str]]
+    allowVolumeExpansion: bool
+    allowedTopologies: list[kubernetes_asyncio.client.V1TopologySelectorTermDict]
+    apiVersion: str
+    kind: str
+    metadata: kubernetes_asyncio.client.V1ObjectMetaDict
+    mountOptions: list[str]
+    parameters: dict[str, str]
     provisioner: str
-    reclaimPolicy: typing.Optional[str]
-    volumeBindingMode: typing.Optional[str]
+    reclaimPolicy: str
+    volumeBindingMode: str

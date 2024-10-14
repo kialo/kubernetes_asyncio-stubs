@@ -33,12 +33,8 @@ class V1VolumeProjection:
     def to_dict(self) -> V1VolumeProjectionDict: ...
 
 class V1VolumeProjectionDict(typing.TypedDict, total=False):
-    clusterTrustBundle: typing.Optional[
-        kubernetes_asyncio.client.V1ClusterTrustBundleProjectionDict
-    ]
-    configMap: typing.Optional[kubernetes_asyncio.client.V1ConfigMapProjectionDict]
-    downwardAPI: typing.Optional[kubernetes_asyncio.client.V1DownwardAPIProjectionDict]
-    secret: typing.Optional[kubernetes_asyncio.client.V1SecretProjectionDict]
-    serviceAccountToken: typing.Optional[
-        kubernetes_asyncio.client.V1ServiceAccountTokenProjectionDict
-    ]
+    clusterTrustBundle: kubernetes_asyncio.client.V1ClusterTrustBundleProjectionDict
+    configMap: kubernetes_asyncio.client.V1ConfigMapProjectionDict
+    downwardAPI: kubernetes_asyncio.client.V1DownwardAPIProjectionDict
+    secret: kubernetes_asyncio.client.V1SecretProjectionDict
+    serviceAccountToken: kubernetes_asyncio.client.V1ServiceAccountTokenProjectionDict

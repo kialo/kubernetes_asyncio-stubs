@@ -17,6 +17,6 @@ class V1ScopeSelector:
     def to_dict(self) -> V1ScopeSelectorDict: ...
 
 class V1ScopeSelectorDict(typing.TypedDict, total=False):
-    matchExpressions: typing.Optional[
-        list[kubernetes_asyncio.client.V1ScopedResourceSelectorRequirementDict]
+    matchExpressions: list[
+        kubernetes_asyncio.client.V1ScopedResourceSelectorRequirementDict
     ]

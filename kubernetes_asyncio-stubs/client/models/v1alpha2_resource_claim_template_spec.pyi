@@ -15,5 +15,5 @@ class V1alpha2ResourceClaimTemplateSpec:
     def to_dict(self) -> V1alpha2ResourceClaimTemplateSpecDict: ...
 
 class V1alpha2ResourceClaimTemplateSpecDict(typing.TypedDict, total=False):
-    metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMetaDict]
+    metadata: kubernetes_asyncio.client.V1ObjectMetaDict
     spec: kubernetes_asyncio.client.V1alpha2ResourceClaimSpecDict

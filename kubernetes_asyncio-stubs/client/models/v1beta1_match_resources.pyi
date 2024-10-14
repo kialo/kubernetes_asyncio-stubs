@@ -33,12 +33,10 @@ class V1beta1MatchResources:
     def to_dict(self) -> V1beta1MatchResourcesDict: ...
 
 class V1beta1MatchResourcesDict(typing.TypedDict, total=False):
-    excludeResourceRules: typing.Optional[
-        list[kubernetes_asyncio.client.V1beta1NamedRuleWithOperationsDict]
+    excludeResourceRules: list[
+        kubernetes_asyncio.client.V1beta1NamedRuleWithOperationsDict
     ]
-    matchPolicy: typing.Optional[str]
-    namespaceSelector: typing.Optional[kubernetes_asyncio.client.V1LabelSelectorDict]
-    objectSelector: typing.Optional[kubernetes_asyncio.client.V1LabelSelectorDict]
-    resourceRules: typing.Optional[
-        list[kubernetes_asyncio.client.V1beta1NamedRuleWithOperationsDict]
-    ]
+    matchPolicy: str
+    namespaceSelector: kubernetes_asyncio.client.V1LabelSelectorDict
+    objectSelector: kubernetes_asyncio.client.V1LabelSelectorDict
+    resourceRules: list[kubernetes_asyncio.client.V1beta1NamedRuleWithOperationsDict]

@@ -119,47 +119,39 @@ class V1Volume:
     def to_dict(self) -> V1VolumeDict: ...
 
 class V1VolumeDict(typing.TypedDict, total=False):
-    awsElasticBlockStore: typing.Optional[
+    awsElasticBlockStore: (
         kubernetes_asyncio.client.V1AWSElasticBlockStoreVolumeSourceDict
-    ]
-    azureDisk: typing.Optional[kubernetes_asyncio.client.V1AzureDiskVolumeSourceDict]
-    azureFile: typing.Optional[kubernetes_asyncio.client.V1AzureFileVolumeSourceDict]
-    cephfs: typing.Optional[kubernetes_asyncio.client.V1CephFSVolumeSourceDict]
-    cinder: typing.Optional[kubernetes_asyncio.client.V1CinderVolumeSourceDict]
-    configMap: typing.Optional[kubernetes_asyncio.client.V1ConfigMapVolumeSourceDict]
-    csi: typing.Optional[kubernetes_asyncio.client.V1CSIVolumeSourceDict]
-    downwardAPI: typing.Optional[
-        kubernetes_asyncio.client.V1DownwardAPIVolumeSourceDict
-    ]
-    emptyDir: typing.Optional[kubernetes_asyncio.client.V1EmptyDirVolumeSourceDict]
-    ephemeral: typing.Optional[kubernetes_asyncio.client.V1EphemeralVolumeSourceDict]
-    fc: typing.Optional[kubernetes_asyncio.client.V1FCVolumeSourceDict]
-    flexVolume: typing.Optional[kubernetes_asyncio.client.V1FlexVolumeSourceDict]
-    flocker: typing.Optional[kubernetes_asyncio.client.V1FlockerVolumeSourceDict]
-    gcePersistentDisk: typing.Optional[
-        kubernetes_asyncio.client.V1GCEPersistentDiskVolumeSourceDict
-    ]
-    gitRepo: typing.Optional[kubernetes_asyncio.client.V1GitRepoVolumeSourceDict]
-    glusterfs: typing.Optional[kubernetes_asyncio.client.V1GlusterfsVolumeSourceDict]
-    hostPath: typing.Optional[kubernetes_asyncio.client.V1HostPathVolumeSourceDict]
-    iscsi: typing.Optional[kubernetes_asyncio.client.V1ISCSIVolumeSourceDict]
+    )
+    azureDisk: kubernetes_asyncio.client.V1AzureDiskVolumeSourceDict
+    azureFile: kubernetes_asyncio.client.V1AzureFileVolumeSourceDict
+    cephfs: kubernetes_asyncio.client.V1CephFSVolumeSourceDict
+    cinder: kubernetes_asyncio.client.V1CinderVolumeSourceDict
+    configMap: kubernetes_asyncio.client.V1ConfigMapVolumeSourceDict
+    csi: kubernetes_asyncio.client.V1CSIVolumeSourceDict
+    downwardAPI: kubernetes_asyncio.client.V1DownwardAPIVolumeSourceDict
+    emptyDir: kubernetes_asyncio.client.V1EmptyDirVolumeSourceDict
+    ephemeral: kubernetes_asyncio.client.V1EphemeralVolumeSourceDict
+    fc: kubernetes_asyncio.client.V1FCVolumeSourceDict
+    flexVolume: kubernetes_asyncio.client.V1FlexVolumeSourceDict
+    flocker: kubernetes_asyncio.client.V1FlockerVolumeSourceDict
+    gcePersistentDisk: kubernetes_asyncio.client.V1GCEPersistentDiskVolumeSourceDict
+    gitRepo: kubernetes_asyncio.client.V1GitRepoVolumeSourceDict
+    glusterfs: kubernetes_asyncio.client.V1GlusterfsVolumeSourceDict
+    hostPath: kubernetes_asyncio.client.V1HostPathVolumeSourceDict
+    iscsi: kubernetes_asyncio.client.V1ISCSIVolumeSourceDict
     name: str
-    nfs: typing.Optional[kubernetes_asyncio.client.V1NFSVolumeSourceDict]
-    persistentVolumeClaim: typing.Optional[
+    nfs: kubernetes_asyncio.client.V1NFSVolumeSourceDict
+    persistentVolumeClaim: (
         kubernetes_asyncio.client.V1PersistentVolumeClaimVolumeSourceDict
-    ]
-    photonPersistentDisk: typing.Optional[
+    )
+    photonPersistentDisk: (
         kubernetes_asyncio.client.V1PhotonPersistentDiskVolumeSourceDict
-    ]
-    portworxVolume: typing.Optional[
-        kubernetes_asyncio.client.V1PortworxVolumeSourceDict
-    ]
-    projected: typing.Optional[kubernetes_asyncio.client.V1ProjectedVolumeSourceDict]
-    quobyte: typing.Optional[kubernetes_asyncio.client.V1QuobyteVolumeSourceDict]
-    rbd: typing.Optional[kubernetes_asyncio.client.V1RBDVolumeSourceDict]
-    scaleIO: typing.Optional[kubernetes_asyncio.client.V1ScaleIOVolumeSourceDict]
-    secret: typing.Optional[kubernetes_asyncio.client.V1SecretVolumeSourceDict]
-    storageos: typing.Optional[kubernetes_asyncio.client.V1StorageOSVolumeSourceDict]
-    vsphereVolume: typing.Optional[
-        kubernetes_asyncio.client.V1VsphereVirtualDiskVolumeSourceDict
-    ]
+    )
+    portworxVolume: kubernetes_asyncio.client.V1PortworxVolumeSourceDict
+    projected: kubernetes_asyncio.client.V1ProjectedVolumeSourceDict
+    quobyte: kubernetes_asyncio.client.V1QuobyteVolumeSourceDict
+    rbd: kubernetes_asyncio.client.V1RBDVolumeSourceDict
+    scaleIO: kubernetes_asyncio.client.V1ScaleIOVolumeSourceDict
+    secret: kubernetes_asyncio.client.V1SecretVolumeSourceDict
+    storageos: kubernetes_asyncio.client.V1StorageOSVolumeSourceDict
+    vsphereVolume: kubernetes_asyncio.client.V1VsphereVirtualDiskVolumeSourceDict

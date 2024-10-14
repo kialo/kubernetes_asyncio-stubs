@@ -21,8 +21,6 @@ class AdmissionregistrationV1WebhookClientConfig:
     def to_dict(self) -> AdmissionregistrationV1WebhookClientConfigDict: ...
 
 class AdmissionregistrationV1WebhookClientConfigDict(typing.TypedDict, total=False):
-    caBundle: typing.Optional[str]
-    service: typing.Optional[
-        kubernetes_asyncio.client.AdmissionregistrationV1ServiceReferenceDict
-    ]
-    url: typing.Optional[str]
+    caBundle: str
+    service: kubernetes_asyncio.client.AdmissionregistrationV1ServiceReferenceDict
+    url: str

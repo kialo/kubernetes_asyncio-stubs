@@ -19,6 +19,6 @@ class V1beta1ValidatingAdmissionPolicyStatus:
     def to_dict(self) -> V1beta1ValidatingAdmissionPolicyStatusDict: ...
 
 class V1beta1ValidatingAdmissionPolicyStatusDict(typing.TypedDict, total=False):
-    conditions: typing.Optional[list[kubernetes_asyncio.client.V1ConditionDict]]
-    observedGeneration: typing.Optional[int]
-    typeChecking: typing.Optional[kubernetes_asyncio.client.V1beta1TypeCheckingDict]
+    conditions: list[kubernetes_asyncio.client.V1ConditionDict]
+    observedGeneration: int
+    typeChecking: kubernetes_asyncio.client.V1beta1TypeCheckingDict

@@ -23,9 +23,5 @@ class V1NodeSelectorTerm:
     def to_dict(self) -> V1NodeSelectorTermDict: ...
 
 class V1NodeSelectorTermDict(typing.TypedDict, total=False):
-    matchExpressions: typing.Optional[
-        list[kubernetes_asyncio.client.V1NodeSelectorRequirementDict]
-    ]
-    matchFields: typing.Optional[
-        list[kubernetes_asyncio.client.V1NodeSelectorRequirementDict]
-    ]
+    matchExpressions: list[kubernetes_asyncio.client.V1NodeSelectorRequirementDict]
+    matchFields: list[kubernetes_asyncio.client.V1NodeSelectorRequirementDict]

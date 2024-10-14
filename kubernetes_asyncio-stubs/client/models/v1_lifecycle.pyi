@@ -15,5 +15,5 @@ class V1Lifecycle:
     def to_dict(self) -> V1LifecycleDict: ...
 
 class V1LifecycleDict(typing.TypedDict, total=False):
-    postStart: typing.Optional[kubernetes_asyncio.client.V1LifecycleHandlerDict]
-    preStop: typing.Optional[kubernetes_asyncio.client.V1LifecycleHandlerDict]
+    postStart: kubernetes_asyncio.client.V1LifecycleHandlerDict
+    preStop: kubernetes_asyncio.client.V1LifecycleHandlerDict

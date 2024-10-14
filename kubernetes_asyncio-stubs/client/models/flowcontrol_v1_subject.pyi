@@ -21,9 +21,7 @@ class FlowcontrolV1Subject:
     def to_dict(self) -> FlowcontrolV1SubjectDict: ...
 
 class FlowcontrolV1SubjectDict(typing.TypedDict, total=False):
-    group: typing.Optional[kubernetes_asyncio.client.V1GroupSubjectDict]
+    group: kubernetes_asyncio.client.V1GroupSubjectDict
     kind: str
-    serviceAccount: typing.Optional[
-        kubernetes_asyncio.client.V1ServiceAccountSubjectDict
-    ]
-    user: typing.Optional[kubernetes_asyncio.client.V1UserSubjectDict]
+    serviceAccount: kubernetes_asyncio.client.V1ServiceAccountSubjectDict
+    user: kubernetes_asyncio.client.V1UserSubjectDict

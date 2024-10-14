@@ -17,5 +17,5 @@ class V1ServiceStatus:
     def to_dict(self) -> V1ServiceStatusDict: ...
 
 class V1ServiceStatusDict(typing.TypedDict, total=False):
-    conditions: typing.Optional[list[kubernetes_asyncio.client.V1ConditionDict]]
-    loadBalancer: typing.Optional[kubernetes_asyncio.client.V1LoadBalancerStatusDict]
+    conditions: list[kubernetes_asyncio.client.V1ConditionDict]
+    loadBalancer: kubernetes_asyncio.client.V1LoadBalancerStatusDict

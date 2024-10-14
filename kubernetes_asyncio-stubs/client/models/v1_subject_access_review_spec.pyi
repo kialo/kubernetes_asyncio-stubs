@@ -29,13 +29,9 @@ class V1SubjectAccessReviewSpec:
     def to_dict(self) -> V1SubjectAccessReviewSpecDict: ...
 
 class V1SubjectAccessReviewSpecDict(typing.TypedDict, total=False):
-    extra: typing.Optional[dict[str, list[str]]]
-    groups: typing.Optional[list[str]]
-    nonResourceAttributes: typing.Optional[
-        kubernetes_asyncio.client.V1NonResourceAttributesDict
-    ]
-    resourceAttributes: typing.Optional[
-        kubernetes_asyncio.client.V1ResourceAttributesDict
-    ]
-    uid: typing.Optional[str]
-    user: typing.Optional[str]
+    extra: dict[str, list[str]]
+    groups: list[str]
+    nonResourceAttributes: kubernetes_asyncio.client.V1NonResourceAttributesDict
+    resourceAttributes: kubernetes_asyncio.client.V1ResourceAttributesDict
+    uid: str
+    user: str
