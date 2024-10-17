@@ -1,9 +1,16 @@
 [project]
 name = "kubernetes_asyncio-stubs"
-version = "29.0.1"
+version = "30.3.1"
 description = "Type stubs for the Kubernetes Python API async client"
 authors = [{ name = "Kialo", email = "sre@kialo.com" }]
 license = "Apache-2.0"
 readme = "Readme.md"
 dependencies = ["inflection == 0.5.1", "ruff == 0.6.9"]
 requires-python = ">=3.12"
+
+[tool.setuptools]
+packages = ["kubernetes_asyncio_ext", "kubernetes_asyncio-stubs"]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
