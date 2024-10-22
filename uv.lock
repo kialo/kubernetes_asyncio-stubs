@@ -14,13 +14,17 @@ wheels = [
 name = "kubernetes-asyncio-stubs"
 version = "30.3.1"
 source = { editable = "." }
-dependencies = [
+
+[package.dev-dependencies]
+dev = [
     { name = "inflection" },
     { name = "ruff" },
 ]
 
 [package.metadata]
-requires-dist = [
+
+[package.metadata.requires-dev]
+dev = [
     { name = "inflection", specifier = "==0.5.1" },
     { name = "ruff", specifier = "==0.6.9" },
 ]
