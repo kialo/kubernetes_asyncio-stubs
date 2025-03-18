@@ -33,6 +33,14 @@ dev-dependencies = [
 
 Remember to change the version number accordingly.
 
+## Update development dependencies
+
+Dev dependencies are currently only pinned via uv's lock file. You can upgrade them via:
+
+```bash
+uv sync --upgrade
+```
+
 ## Development
 
 These stubs are not complete, and in some cases may be incorrect.
