@@ -4,9 +4,7 @@ import typing
 
 class V1beta1ValidatingAdmissionPolicyList:
     api_version: str
-    items: typing.Optional[
-        list[kubernetes_asyncio.client.V1beta1ValidatingAdmissionPolicy]
-    ]
+    items: list[kubernetes_asyncio.client.V1beta1ValidatingAdmissionPolicy]
     kind: str
     metadata: kubernetes_asyncio.client.V1ListMeta
 
@@ -14,9 +12,7 @@ class V1beta1ValidatingAdmissionPolicyList:
         self,
         *,
         api_version: typing.Optional[str] = ...,
-        items: typing.Optional[
-            list[kubernetes_asyncio.client.V1beta1ValidatingAdmissionPolicy]
-        ] = ...,
+        items: list[kubernetes_asyncio.client.V1beta1ValidatingAdmissionPolicy],
         kind: typing.Optional[str] = ...,
         metadata: typing.Optional[kubernetes_asyncio.client.V1ListMeta] = ...,
     ) -> None: ...

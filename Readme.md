@@ -51,6 +51,6 @@ To (re-) generate the stubs for a (new) version of the Kubernetes API client, ru
 
 1. Update `kubernetes_asyncio` submodule to target release
 2. Update version in `pyproject.toml`
-3. Generate API models: `uv run codegen ${target-version}`
+3. Generate API models: `uv run --only-dev codegen ${target-version}`
 4. Commit changes
 5. Release new tag: `git tag v${version}; git push v${version}`

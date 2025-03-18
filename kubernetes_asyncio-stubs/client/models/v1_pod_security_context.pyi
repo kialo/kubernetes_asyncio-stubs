@@ -12,6 +12,7 @@ class V1PodSecurityContext:
     se_linux_options: typing.Optional[kubernetes_asyncio.client.V1SELinuxOptions]
     seccomp_profile: typing.Optional[kubernetes_asyncio.client.V1SeccompProfile]
     supplemental_groups: typing.Optional[list[int]]
+    supplemental_groups_policy: typing.Optional[str]
     sysctls: typing.Optional[list[kubernetes_asyncio.client.V1Sysctl]]
     windows_options: typing.Optional[
         kubernetes_asyncio.client.V1WindowsSecurityContextOptions
@@ -35,6 +36,7 @@ class V1PodSecurityContext:
             kubernetes_asyncio.client.V1SeccompProfile
         ] = ...,
         supplemental_groups: typing.Optional[list[int]] = ...,
+        supplemental_groups_policy: typing.Optional[str] = ...,
         sysctls: typing.Optional[list[kubernetes_asyncio.client.V1Sysctl]] = ...,
         windows_options: typing.Optional[
             kubernetes_asyncio.client.V1WindowsSecurityContextOptions
@@ -52,5 +54,6 @@ class V1PodSecurityContextDict(typing.TypedDict, total=False):
     seLinuxOptions: kubernetes_asyncio.client.V1SELinuxOptionsDict
     seccompProfile: kubernetes_asyncio.client.V1SeccompProfileDict
     supplementalGroups: list[int]
+    supplementalGroupsPolicy: str
     sysctls: list[kubernetes_asyncio.client.V1SysctlDict]
     windowsOptions: kubernetes_asyncio.client.V1WindowsSecurityContextOptionsDict

@@ -24,6 +24,7 @@ class V1Volume:
     git_repo: typing.Optional[kubernetes_asyncio.client.V1GitRepoVolumeSource]
     glusterfs: typing.Optional[kubernetes_asyncio.client.V1GlusterfsVolumeSource]
     host_path: typing.Optional[kubernetes_asyncio.client.V1HostPathVolumeSource]
+    image: typing.Optional[kubernetes_asyncio.client.V1ImageVolumeSource]
     iscsi: typing.Optional[kubernetes_asyncio.client.V1ISCSIVolumeSource]
     name: str
     nfs: typing.Optional[kubernetes_asyncio.client.V1NFSVolumeSource]
@@ -88,6 +89,7 @@ class V1Volume:
         host_path: typing.Optional[
             kubernetes_asyncio.client.V1HostPathVolumeSource
         ] = ...,
+        image: typing.Optional[kubernetes_asyncio.client.V1ImageVolumeSource] = ...,
         iscsi: typing.Optional[kubernetes_asyncio.client.V1ISCSIVolumeSource] = ...,
         name: str,
         nfs: typing.Optional[kubernetes_asyncio.client.V1NFSVolumeSource] = ...,
@@ -138,6 +140,7 @@ class V1VolumeDict(typing.TypedDict, total=False):
     gitRepo: kubernetes_asyncio.client.V1GitRepoVolumeSourceDict
     glusterfs: kubernetes_asyncio.client.V1GlusterfsVolumeSourceDict
     hostPath: kubernetes_asyncio.client.V1HostPathVolumeSourceDict
+    image: kubernetes_asyncio.client.V1ImageVolumeSourceDict
     iscsi: kubernetes_asyncio.client.V1ISCSIVolumeSourceDict
     name: str
     nfs: kubernetes_asyncio.client.V1NFSVolumeSourceDict

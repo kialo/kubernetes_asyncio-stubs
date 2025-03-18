@@ -9,6 +9,7 @@ class V1NodeStatus:
     conditions: typing.Optional[list[kubernetes_asyncio.client.V1NodeCondition]]
     config: typing.Optional[kubernetes_asyncio.client.V1NodeConfigStatus]
     daemon_endpoints: typing.Optional[kubernetes_asyncio.client.V1NodeDaemonEndpoints]
+    features: typing.Optional[kubernetes_asyncio.client.V1NodeFeatures]
     images: typing.Optional[list[kubernetes_asyncio.client.V1ContainerImage]]
     node_info: typing.Optional[kubernetes_asyncio.client.V1NodeSystemInfo]
     phase: typing.Optional[str]
@@ -31,6 +32,7 @@ class V1NodeStatus:
         daemon_endpoints: typing.Optional[
             kubernetes_asyncio.client.V1NodeDaemonEndpoints
         ] = ...,
+        features: typing.Optional[kubernetes_asyncio.client.V1NodeFeatures] = ...,
         images: typing.Optional[list[kubernetes_asyncio.client.V1ContainerImage]] = ...,
         node_info: typing.Optional[kubernetes_asyncio.client.V1NodeSystemInfo] = ...,
         phase: typing.Optional[str] = ...,
@@ -51,6 +53,7 @@ class V1NodeStatusDict(typing.TypedDict, total=False):
     conditions: list[kubernetes_asyncio.client.V1NodeConditionDict]
     config: kubernetes_asyncio.client.V1NodeConfigStatusDict
     daemonEndpoints: kubernetes_asyncio.client.V1NodeDaemonEndpointsDict
+    features: kubernetes_asyncio.client.V1NodeFeaturesDict
     images: list[kubernetes_asyncio.client.V1ContainerImageDict]
     nodeInfo: kubernetes_asyncio.client.V1NodeSystemInfoDict
     phase: str

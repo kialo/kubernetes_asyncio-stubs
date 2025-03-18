@@ -71,6 +71,9 @@ from kubernetes_asyncio.client.api.coordination_api import (
 from kubernetes_asyncio.client.api.coordination_v1_api import (
     CoordinationV1Api as CoordinationV1Api,
 )
+from kubernetes_asyncio.client.api.coordination_v1alpha1_api import (
+    CoordinationV1alpha1Api as CoordinationV1alpha1Api,
+)
 from kubernetes_asyncio.client.api.discovery_api import DiscoveryApi as DiscoveryApi
 from kubernetes_asyncio.client.api.discovery_v1_api import (
     DiscoveryV1Api as DiscoveryV1Api,
@@ -96,8 +99,8 @@ from kubernetes_asyncio.client.api.networking_api import NetworkingApi as Networ
 from kubernetes_asyncio.client.api.networking_v1_api import (
     NetworkingV1Api as NetworkingV1Api,
 )
-from kubernetes_asyncio.client.api.networking_v1alpha1_api import (
-    NetworkingV1alpha1Api as NetworkingV1alpha1Api,
+from kubernetes_asyncio.client.api.networking_v1beta1_api import (
+    NetworkingV1beta1Api as NetworkingV1beta1Api,
 )
 from kubernetes_asyncio.client.api.node_api import NodeApi as NodeApi
 from kubernetes_asyncio.client.api.node_v1_api import NodeV1Api as NodeV1Api
@@ -110,8 +113,8 @@ from kubernetes_asyncio.client.api.rbacAuthorization_v1_api import (
     RbacAuthorizationV1Api as RbacAuthorizationV1Api,
 )
 from kubernetes_asyncio.client.api.resource_api import ResourceApi as ResourceApi
-from kubernetes_asyncio.client.api.resource_v1alpha2_api import (
-    ResourceV1alpha2Api as ResourceV1alpha2Api,
+from kubernetes_asyncio.client.api.resource_v1alpha3_api import (
+    ResourceV1alpha3Api as ResourceV1alpha3Api,
 )
 from kubernetes_asyncio.client.api.scheduling_api import SchedulingApi as SchedulingApi
 from kubernetes_asyncio.client.api.scheduling_v1_api import (
@@ -121,6 +124,9 @@ from kubernetes_asyncio.client.api.storage_api import StorageApi as StorageApi
 from kubernetes_asyncio.client.api.storage_v1_api import StorageV1Api as StorageV1Api
 from kubernetes_asyncio.client.api.storage_v1alpha1_api import (
     StorageV1alpha1Api as StorageV1alpha1Api,
+)
+from kubernetes_asyncio.client.api.storage_v1beta1_api import (
+    StorageV1beta1Api as StorageV1beta1Api,
 )
 from kubernetes_asyncio.client.api.storagemigration_api import (
     StoragemigrationApi as StoragemigrationApi,

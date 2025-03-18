@@ -1,6 +1,6 @@
 [project]
 name = "kubernetes_asyncio-stubs"
-version = "30.3.1"
+version = "31.1.1"
 description = "Type stubs for the Kubernetes Python API async client"
 authors = [{ name = "Kialo", email = "sre@kialo.com" }]
 license = { file = "LICENSE.md" }
