@@ -1,8 +1,11 @@
 # kubernetes_asyncio-stubs
 
-Python type stubs for the [Kubernetes API client](https://github.com/borissmidt/kubernetes_asyncio.git).
+Python type stubs for the [Kubernetes API client](https://github.com/tomplus/kubernetes_asyncio.git).
 The code has been forked from [MaterializeInc/kubernetes-stubs](https://github.com/MaterializeInc/kubernetes-stubs.git).
-Stubs are contained in Git branches, which are named after the respective Kubernetes client version.
+
+At Kialo, we only have a single Kubernetes version in use at each time.
+For a simplified release process, we release new stubs versions only for that version.
+See tags for available list.
 
 ## Installation
 
@@ -24,7 +27,7 @@ uv:
 ```toml
 [tool.uv]
 dev-dependencies = [
-  "kubernetes-stubs @ git+https://github.com/kialo/kubernetes_asyncio-stubs.git@29.0.1",
+  "kubernetes_asyncio-stubs @ git+https://github.com/kialo/kubernetes_asyncio-stubs.git@29.0.1",
 ]
 ```
 
@@ -33,9 +36,13 @@ Remember to change the version number accordingly.
 ## Development
 
 These stubs are not complete, and in some cases may be incorrect.
-Follow these steps to adapt or extend the stubs:
 
-1. Include missing annotations in the base files under `codegen/base/`, preferably on the `master` branch.
-2. Switch to a Git branch named after the `kubernetes_asyncio` version you are generating stubs for,
-   and checkout the corresponding tag of the `kubernetes_asyncio` submodule.
-3. Run `uv sync && uv run codegen` to generate stubs from the Kubernetes OpenAPI spec.
+Annotations for base files are stored under `codegen/base/`.
+
+To (re-) generate the stubs for a (new) version of the Kubernetes API client, run:
+
+1. Update `kubernetes_asyncio` submodule to target release
+2. Update version in `pyproject.toml`
+3. Generate API models: `uv run codegen ${target-version}`
+4. Commit changes
+5. Release new tag: `git tag v${version}; git push v${version}`
