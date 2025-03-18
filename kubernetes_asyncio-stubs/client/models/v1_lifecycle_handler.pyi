@@ -1,0 +1,25 @@
+import kubernetes_asyncio.client
+import kubernetes_asyncio.client.api_client
+import typing
+
+class V1LifecycleHandler:
+    exec: typing.Optional[kubernetes_asyncio.client.V1ExecAction]
+    http_get: typing.Optional[kubernetes_asyncio.client.V1HTTPGetAction]
+    sleep: typing.Optional[kubernetes_asyncio.client.V1SleepAction]
+    tcp_socket: typing.Optional[kubernetes_asyncio.client.V1TCPSocketAction]
+
+    def __init__(
+        self,
+        *,
+        exec: typing.Optional[kubernetes_asyncio.client.V1ExecAction] = ...,
+        http_get: typing.Optional[kubernetes_asyncio.client.V1HTTPGetAction] = ...,
+        sleep: typing.Optional[kubernetes_asyncio.client.V1SleepAction] = ...,
+        tcp_socket: typing.Optional[kubernetes_asyncio.client.V1TCPSocketAction] = ...,
+    ) -> None: ...
+    def to_dict(self) -> V1LifecycleHandlerDict: ...
+
+class V1LifecycleHandlerDict(typing.TypedDict, total=False):
+    exec: kubernetes_asyncio.client.V1ExecActionDict
+    httpGet: kubernetes_asyncio.client.V1HTTPGetActionDict
+    sleep: kubernetes_asyncio.client.V1SleepActionDict
+    tcpSocket: kubernetes_asyncio.client.V1TCPSocketActionDict
