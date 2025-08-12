@@ -32,6 +32,7 @@ class V1PodSpec:
     priority_class_name: typing.Optional[str]
     readiness_gates: typing.Optional[list[kubernetes_asyncio.client.V1PodReadinessGate]]
     resource_claims: typing.Optional[list[kubernetes_asyncio.client.V1PodResourceClaim]]
+    resources: typing.Optional[kubernetes_asyncio.client.V1ResourceRequirements]
     restart_policy: typing.Optional[str]
     runtime_class_name: typing.Optional[str]
     scheduler_name: typing.Optional[str]
@@ -91,6 +92,9 @@ class V1PodSpec:
         resource_claims: typing.Optional[
             list[kubernetes_asyncio.client.V1PodResourceClaim]
         ] = ...,
+        resources: typing.Optional[
+            kubernetes_asyncio.client.V1ResourceRequirements
+        ] = ...,
         restart_policy: typing.Optional[str] = ...,
         runtime_class_name: typing.Optional[str] = ...,
         scheduler_name: typing.Optional[str] = ...,
@@ -142,6 +146,7 @@ class V1PodSpecDict(typing.TypedDict, total=False):
     priorityClassName: str
     readinessGates: list[kubernetes_asyncio.client.V1PodReadinessGateDict]
     resourceClaims: list[kubernetes_asyncio.client.V1PodResourceClaimDict]
+    resources: kubernetes_asyncio.client.V1ResourceRequirementsDict
     restartPolicy: str
     runtimeClassName: str
     schedulerName: str

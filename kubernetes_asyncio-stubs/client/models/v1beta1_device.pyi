@@ -1,0 +1,19 @@
+import kubernetes_asyncio.client
+import kubernetes_asyncio.client.api_client
+import typing
+
+class V1beta1Device:
+    basic: typing.Optional[kubernetes_asyncio.client.V1beta1BasicDevice]
+    name: str
+
+    def __init__(
+        self,
+        *,
+        basic: typing.Optional[kubernetes_asyncio.client.V1beta1BasicDevice] = ...,
+        name: str,
+    ) -> None: ...
+    def to_dict(self) -> V1beta1DeviceDict: ...
+
+class V1beta1DeviceDict(typing.TypedDict, total=False):
+    basic: kubernetes_asyncio.client.V1beta1BasicDeviceDict
+    name: str

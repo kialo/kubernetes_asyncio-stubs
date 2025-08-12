@@ -159,6 +159,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -191,6 +194,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -242,6 +248,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -274,6 +283,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -325,6 +337,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -357,6 +372,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -408,6 +426,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -440,6 +461,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -491,6 +515,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -523,6 +550,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1PersistentVolumeClaim: ...
@@ -600,6 +630,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -632,6 +665,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Pod: ...
@@ -753,6 +789,7 @@ class CoreV1Api:
         pretty: typing.Optional[str] = ...,
         previous: typing.Optional[bool] = ...,
         since_seconds: typing.Optional[int] = ...,
+        stream: typing.Optional[str] = ...,
         tail_lines: typing.Optional[int] = ...,
         timestamps: typing.Optional[bool] = ...,
     ) -> str: ...
@@ -804,6 +841,32 @@ class CoreV1Api:
     async def connect_patch_namespaced_pod_proxy_with_path(
         self, name: str, namespace: str, path: str, *, path2: typing.Optional[str] = ...
     ) -> str: ...
+    async def read_namespaced_pod_resize(
+        self, name: str, namespace: str, *, pretty: typing.Optional[str] = ...
+    ) -> kubernetes_asyncio.client.V1Pod: ...
+    async def replace_namespaced_pod_resize(
+        self,
+        name: str,
+        namespace: str,
+        body: kubernetes_asyncio.client.V1Pod,
+        *,
+        pretty: typing.Optional[str] = ...,
+        dry_run: typing.Optional[str] = ...,
+        field_manager: typing.Optional[str] = ...,
+        field_validation: typing.Optional[str] = ...,
+    ) -> kubernetes_asyncio.client.V1Pod: ...
+    async def patch_namespaced_pod_resize(
+        self,
+        name: str,
+        namespace: str,
+        body: typing.Any,
+        *,
+        pretty: typing.Optional[str] = ...,
+        dry_run: typing.Optional[str] = ...,
+        field_manager: typing.Optional[str] = ...,
+        field_validation: typing.Optional[str] = ...,
+        force: typing.Optional[bool] = ...,
+    ) -> kubernetes_asyncio.client.V1Pod: ...
     async def read_namespaced_pod_status(
         self, name: str, namespace: str, *, pretty: typing.Optional[str] = ...
     ) -> kubernetes_asyncio.client.V1Pod: ...
@@ -866,6 +929,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -898,6 +964,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1PodTemplate: ...
@@ -949,6 +1018,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -981,6 +1053,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -1084,6 +1159,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -1116,6 +1194,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1ResourceQuota: ...
@@ -1193,6 +1274,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -1225,6 +1309,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -1276,6 +1363,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -1308,6 +1398,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1ServiceAccount: ...
@@ -1370,6 +1463,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -1402,6 +1498,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Service: ...
@@ -1506,6 +1605,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -1587,6 +1689,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -1617,6 +1722,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -1745,6 +1853,9 @@ class CoreV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -1775,6 +1886,9 @@ class CoreV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1PersistentVolume: ...

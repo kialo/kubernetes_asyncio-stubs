@@ -44,6 +44,9 @@ class ResourceV1alpha3Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -74,6 +77,9 @@ class ResourceV1alpha3Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1alpha3DeviceClass: ...
@@ -88,115 +94,6 @@ class ResourceV1alpha3Api:
         field_validation: typing.Optional[str] = ...,
         force: typing.Optional[bool] = ...,
     ) -> kubernetes_asyncio.client.V1alpha3DeviceClass: ...
-    async def list_namespaced_pod_scheduling_context(
-        self,
-        namespace: str,
-        *,
-        pretty: typing.Optional[str] = ...,
-        allow_watch_bookmarks: typing.Optional[bool] = ...,
-        _continue: typing.Optional[str] = ...,
-        field_selector: typing.Optional[str] = ...,
-        label_selector: typing.Optional[str] = ...,
-        limit: typing.Optional[int] = ...,
-        resource_version: typing.Optional[str] = ...,
-        resource_version_match: typing.Optional[str] = ...,
-        send_initial_events: typing.Optional[bool] = ...,
-        timeout_seconds: typing.Optional[int] = ...,
-        watch: typing.Optional[bool] = ...,
-    ) -> kubernetes_asyncio.client.V1alpha3PodSchedulingContextList: ...
-    async def create_namespaced_pod_scheduling_context(
-        self,
-        namespace: str,
-        body: kubernetes_asyncio.client.V1alpha3PodSchedulingContext,
-        *,
-        pretty: typing.Optional[str] = ...,
-        dry_run: typing.Optional[str] = ...,
-        field_manager: typing.Optional[str] = ...,
-        field_validation: typing.Optional[str] = ...,
-    ) -> kubernetes_asyncio.client.V1alpha3PodSchedulingContext: ...
-    async def delete_collection_namespaced_pod_scheduling_context(
-        self,
-        namespace: str,
-        *,
-        pretty: typing.Optional[str] = ...,
-        body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
-        _continue: typing.Optional[str] = ...,
-        dry_run: typing.Optional[str] = ...,
-        field_selector: typing.Optional[str] = ...,
-        grace_period_seconds: typing.Optional[int] = ...,
-        label_selector: typing.Optional[str] = ...,
-        limit: typing.Optional[int] = ...,
-        orphan_dependents: typing.Optional[bool] = ...,
-        propagation_policy: typing.Optional[str] = ...,
-        resource_version: typing.Optional[str] = ...,
-        resource_version_match: typing.Optional[str] = ...,
-        send_initial_events: typing.Optional[bool] = ...,
-        timeout_seconds: typing.Optional[int] = ...,
-    ) -> kubernetes_asyncio.client.V1Status: ...
-    async def read_namespaced_pod_scheduling_context(
-        self, name: str, namespace: str, *, pretty: typing.Optional[str] = ...
-    ) -> kubernetes_asyncio.client.V1alpha3PodSchedulingContext: ...
-    async def replace_namespaced_pod_scheduling_context(
-        self,
-        name: str,
-        namespace: str,
-        body: kubernetes_asyncio.client.V1alpha3PodSchedulingContext,
-        *,
-        pretty: typing.Optional[str] = ...,
-        dry_run: typing.Optional[str] = ...,
-        field_manager: typing.Optional[str] = ...,
-        field_validation: typing.Optional[str] = ...,
-    ) -> kubernetes_asyncio.client.V1alpha3PodSchedulingContext: ...
-    async def delete_namespaced_pod_scheduling_context(
-        self,
-        name: str,
-        namespace: str,
-        *,
-        pretty: typing.Optional[str] = ...,
-        body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
-        dry_run: typing.Optional[str] = ...,
-        grace_period_seconds: typing.Optional[int] = ...,
-        orphan_dependents: typing.Optional[bool] = ...,
-        propagation_policy: typing.Optional[str] = ...,
-    ) -> kubernetes_asyncio.client.V1alpha3PodSchedulingContext: ...
-    async def patch_namespaced_pod_scheduling_context(
-        self,
-        name: str,
-        namespace: str,
-        body: typing.Any,
-        *,
-        pretty: typing.Optional[str] = ...,
-        dry_run: typing.Optional[str] = ...,
-        field_manager: typing.Optional[str] = ...,
-        field_validation: typing.Optional[str] = ...,
-        force: typing.Optional[bool] = ...,
-    ) -> kubernetes_asyncio.client.V1alpha3PodSchedulingContext: ...
-    async def read_namespaced_pod_scheduling_context_status(
-        self, name: str, namespace: str, *, pretty: typing.Optional[str] = ...
-    ) -> kubernetes_asyncio.client.V1alpha3PodSchedulingContext: ...
-    async def replace_namespaced_pod_scheduling_context_status(
-        self,
-        name: str,
-        namespace: str,
-        body: kubernetes_asyncio.client.V1alpha3PodSchedulingContext,
-        *,
-        pretty: typing.Optional[str] = ...,
-        dry_run: typing.Optional[str] = ...,
-        field_manager: typing.Optional[str] = ...,
-        field_validation: typing.Optional[str] = ...,
-    ) -> kubernetes_asyncio.client.V1alpha3PodSchedulingContext: ...
-    async def patch_namespaced_pod_scheduling_context_status(
-        self,
-        name: str,
-        namespace: str,
-        body: typing.Any,
-        *,
-        pretty: typing.Optional[str] = ...,
-        dry_run: typing.Optional[str] = ...,
-        field_manager: typing.Optional[str] = ...,
-        field_validation: typing.Optional[str] = ...,
-        force: typing.Optional[bool] = ...,
-    ) -> kubernetes_asyncio.client.V1alpha3PodSchedulingContext: ...
     async def list_namespaced_resource_claim(
         self,
         namespace: str,
@@ -233,6 +130,9 @@ class ResourceV1alpha3Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -265,6 +165,9 @@ class ResourceV1alpha3Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1alpha3ResourceClaim: ...
@@ -342,6 +245,9 @@ class ResourceV1alpha3Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -374,6 +280,9 @@ class ResourceV1alpha3Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1alpha3ResourceClaimTemplate: ...
@@ -389,21 +298,6 @@ class ResourceV1alpha3Api:
         field_validation: typing.Optional[str] = ...,
         force: typing.Optional[bool] = ...,
     ) -> kubernetes_asyncio.client.V1alpha3ResourceClaimTemplate: ...
-    async def list_pod_scheduling_context_for_all_namespaces(
-        self,
-        *,
-        allow_watch_bookmarks: typing.Optional[bool] = ...,
-        _continue: typing.Optional[str] = ...,
-        field_selector: typing.Optional[str] = ...,
-        label_selector: typing.Optional[str] = ...,
-        limit: typing.Optional[int] = ...,
-        pretty: typing.Optional[str] = ...,
-        resource_version: typing.Optional[str] = ...,
-        resource_version_match: typing.Optional[str] = ...,
-        send_initial_events: typing.Optional[bool] = ...,
-        timeout_seconds: typing.Optional[int] = ...,
-        watch: typing.Optional[bool] = ...,
-    ) -> kubernetes_asyncio.client.V1alpha3PodSchedulingContextList: ...
     async def list_resource_claim_for_all_namespaces(
         self,
         *,
@@ -467,6 +361,9 @@ class ResourceV1alpha3Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -497,6 +394,9 @@ class ResourceV1alpha3Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1alpha3ResourceSlice: ...

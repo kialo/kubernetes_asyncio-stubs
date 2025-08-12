@@ -4,7 +4,9 @@ import typing
 
 class V1alpha3ResourceClaimStatus:
     allocation: typing.Optional[kubernetes_asyncio.client.V1alpha3AllocationResult]
-    deallocation_requested: typing.Optional[bool]
+    devices: typing.Optional[
+        list[kubernetes_asyncio.client.V1alpha3AllocatedDeviceStatus]
+    ]
     reserved_for: typing.Optional[
         list[kubernetes_asyncio.client.V1alpha3ResourceClaimConsumerReference]
     ]
@@ -15,7 +17,9 @@ class V1alpha3ResourceClaimStatus:
         allocation: typing.Optional[
             kubernetes_asyncio.client.V1alpha3AllocationResult
         ] = ...,
-        deallocation_requested: typing.Optional[bool] = ...,
+        devices: typing.Optional[
+            list[kubernetes_asyncio.client.V1alpha3AllocatedDeviceStatus]
+        ] = ...,
         reserved_for: typing.Optional[
             list[kubernetes_asyncio.client.V1alpha3ResourceClaimConsumerReference]
         ] = ...,
@@ -24,7 +28,7 @@ class V1alpha3ResourceClaimStatus:
 
 class V1alpha3ResourceClaimStatusDict(typing.TypedDict, total=False):
     allocation: kubernetes_asyncio.client.V1alpha3AllocationResultDict
-    deallocationRequested: bool
+    devices: list[kubernetes_asyncio.client.V1alpha3AllocatedDeviceStatusDict]
     reservedFor: list[
         kubernetes_asyncio.client.V1alpha3ResourceClaimConsumerReferenceDict
     ]

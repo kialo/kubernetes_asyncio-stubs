@@ -9,6 +9,7 @@ class V1PodSecurityContext:
     run_as_group: typing.Optional[int]
     run_as_non_root: typing.Optional[bool]
     run_as_user: typing.Optional[int]
+    se_linux_change_policy: typing.Optional[str]
     se_linux_options: typing.Optional[kubernetes_asyncio.client.V1SELinuxOptions]
     seccomp_profile: typing.Optional[kubernetes_asyncio.client.V1SeccompProfile]
     supplemental_groups: typing.Optional[list[int]]
@@ -29,6 +30,7 @@ class V1PodSecurityContext:
         run_as_group: typing.Optional[int] = ...,
         run_as_non_root: typing.Optional[bool] = ...,
         run_as_user: typing.Optional[int] = ...,
+        se_linux_change_policy: typing.Optional[str] = ...,
         se_linux_options: typing.Optional[
             kubernetes_asyncio.client.V1SELinuxOptions
         ] = ...,
@@ -51,6 +53,7 @@ class V1PodSecurityContextDict(typing.TypedDict, total=False):
     runAsGroup: int
     runAsNonRoot: bool
     runAsUser: int
+    seLinuxChangePolicy: str
     seLinuxOptions: kubernetes_asyncio.client.V1SELinuxOptionsDict
     seccompProfile: kubernetes_asyncio.client.V1SeccompProfileDict
     supplementalGroups: list[int]

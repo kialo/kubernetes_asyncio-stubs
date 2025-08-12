@@ -44,6 +44,9 @@ class RbacAuthorizationV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -74,6 +77,9 @@ class RbacAuthorizationV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -121,6 +127,9 @@ class RbacAuthorizationV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -151,6 +160,9 @@ class RbacAuthorizationV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -201,6 +213,9 @@ class RbacAuthorizationV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -233,6 +248,9 @@ class RbacAuthorizationV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
@@ -284,6 +302,9 @@ class RbacAuthorizationV1Api:
         dry_run: typing.Optional[str] = ...,
         field_selector: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         label_selector: typing.Optional[str] = ...,
         limit: typing.Optional[int] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
@@ -316,6 +337,9 @@ class RbacAuthorizationV1Api:
         body: typing.Optional[kubernetes_asyncio.client.V1DeleteOptions] = ...,
         dry_run: typing.Optional[str] = ...,
         grace_period_seconds: typing.Optional[int] = ...,
+        ignore_store_read_error_with_cluster_breaking_potential: typing.Optional[
+            bool
+        ] = ...,
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes_asyncio.client.V1Status: ...
