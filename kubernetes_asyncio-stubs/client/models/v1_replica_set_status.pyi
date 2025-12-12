@@ -9,6 +9,7 @@ class V1ReplicaSetStatus:
     observed_generation: typing.Optional[int]
     ready_replicas: typing.Optional[int]
     replicas: int
+    terminating_replicas: typing.Optional[int]
 
     def __init__(
         self,
@@ -21,6 +22,7 @@ class V1ReplicaSetStatus:
         observed_generation: typing.Optional[int] = ...,
         ready_replicas: typing.Optional[int] = ...,
         replicas: int,
+        terminating_replicas: typing.Optional[int] = ...,
     ) -> None: ...
     def to_dict(self) -> V1ReplicaSetStatusDict: ...
 
@@ -31,3 +33,4 @@ class V1ReplicaSetStatusDict(typing.TypedDict, total=False):
     observedGeneration: int
     readyReplicas: int
     replicas: int
+    terminatingReplicas: int

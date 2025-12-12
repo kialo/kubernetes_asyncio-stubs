@@ -2,11 +2,11 @@ import kubernetes_asyncio.client
 import kubernetes_asyncio.client.api_client
 import typing
 
-class V1beta1SelfSubjectReview:
+class V1beta1ClusterTrustBundle:
     api_version: str
     kind: str
     metadata: kubernetes_asyncio.client.V1ObjectMeta
-    status: kubernetes_asyncio.client.V1beta1SelfSubjectReviewStatus
+    spec: kubernetes_asyncio.client.V1beta1ClusterTrustBundleSpec
 
     def __init__(
         self,
@@ -14,14 +14,12 @@ class V1beta1SelfSubjectReview:
         api_version: typing.Optional[str] = ...,
         kind: typing.Optional[str] = ...,
         metadata: typing.Optional[kubernetes_asyncio.client.V1ObjectMeta] = ...,
-        status: typing.Optional[
-            kubernetes_asyncio.client.V1beta1SelfSubjectReviewStatus
-        ] = ...,
+        spec: kubernetes_asyncio.client.V1beta1ClusterTrustBundleSpec,
     ) -> None: ...
-    def to_dict(self) -> V1beta1SelfSubjectReviewDict: ...
+    def to_dict(self) -> V1beta1ClusterTrustBundleDict: ...
 
-class V1beta1SelfSubjectReviewDict(typing.TypedDict, total=False):
+class V1beta1ClusterTrustBundleDict(typing.TypedDict, total=False):
     apiVersion: str
     kind: str
     metadata: kubernetes_asyncio.client.V1ObjectMetaDict
-    status: kubernetes_asyncio.client.V1beta1SelfSubjectReviewStatusDict
+    spec: kubernetes_asyncio.client.V1beta1ClusterTrustBundleSpecDict

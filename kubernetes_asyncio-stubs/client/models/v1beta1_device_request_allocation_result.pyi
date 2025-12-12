@@ -1,3 +1,5 @@
+import kubernetes_asyncio.client
+import kubernetes_asyncio.client.api_client
 import typing
 
 class V1beta1DeviceRequestAllocationResult:
@@ -6,6 +8,9 @@ class V1beta1DeviceRequestAllocationResult:
     driver: str
     pool: str
     request: str
+    tolerations: typing.Optional[
+        list[kubernetes_asyncio.client.V1beta1DeviceToleration]
+    ]
 
     def __init__(
         self,
@@ -15,6 +20,9 @@ class V1beta1DeviceRequestAllocationResult:
         driver: str,
         pool: str,
         request: str,
+        tolerations: typing.Optional[
+            list[kubernetes_asyncio.client.V1beta1DeviceToleration]
+        ] = ...,
     ) -> None: ...
     def to_dict(self) -> V1beta1DeviceRequestAllocationResultDict: ...
 
@@ -24,3 +32,4 @@ class V1beta1DeviceRequestAllocationResultDict(typing.TypedDict, total=False):
     driver: str
     pool: str
     request: str
+    tolerations: list[kubernetes_asyncio.client.V1beta1DeviceTolerationDict]

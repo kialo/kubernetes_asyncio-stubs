@@ -8,7 +8,9 @@ class V1alpha3ResourceSliceSpec:
     driver: str
     node_name: typing.Optional[str]
     node_selector: typing.Optional[kubernetes_asyncio.client.V1NodeSelector]
+    per_device_node_selection: typing.Optional[bool]
     pool: kubernetes_asyncio.client.V1alpha3ResourcePool
+    shared_counters: typing.Optional[list[kubernetes_asyncio.client.V1alpha3CounterSet]]
 
     def __init__(
         self,
@@ -18,7 +20,11 @@ class V1alpha3ResourceSliceSpec:
         driver: str,
         node_name: typing.Optional[str] = ...,
         node_selector: typing.Optional[kubernetes_asyncio.client.V1NodeSelector] = ...,
+        per_device_node_selection: typing.Optional[bool] = ...,
         pool: kubernetes_asyncio.client.V1alpha3ResourcePool,
+        shared_counters: typing.Optional[
+            list[kubernetes_asyncio.client.V1alpha3CounterSet]
+        ] = ...,
     ) -> None: ...
     def to_dict(self) -> V1alpha3ResourceSliceSpecDict: ...
 
@@ -28,4 +34,6 @@ class V1alpha3ResourceSliceSpecDict(typing.TypedDict, total=False):
     driver: str
     nodeName: str
     nodeSelector: kubernetes_asyncio.client.V1NodeSelectorDict
+    perDeviceNodeSelection: bool
     pool: kubernetes_asyncio.client.V1alpha3ResourcePoolDict
+    sharedCounters: list[kubernetes_asyncio.client.V1alpha3CounterSetDict]

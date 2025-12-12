@@ -17,6 +17,7 @@ class V1ContainerStatus:
     restart_count: int
     started: typing.Optional[bool]
     state: typing.Optional[kubernetes_asyncio.client.V1ContainerState]
+    stop_signal: typing.Optional[str]
     user: typing.Optional[kubernetes_asyncio.client.V1ContainerUser]
     volume_mounts: typing.Optional[list[kubernetes_asyncio.client.V1VolumeMountStatus]]
 
@@ -39,6 +40,7 @@ class V1ContainerStatus:
         restart_count: int,
         started: typing.Optional[bool] = ...,
         state: typing.Optional[kubernetes_asyncio.client.V1ContainerState] = ...,
+        stop_signal: typing.Optional[str] = ...,
         user: typing.Optional[kubernetes_asyncio.client.V1ContainerUser] = ...,
         volume_mounts: typing.Optional[
             list[kubernetes_asyncio.client.V1VolumeMountStatus]
@@ -59,5 +61,6 @@ class V1ContainerStatusDict(typing.TypedDict, total=False):
     restartCount: int
     started: bool
     state: kubernetes_asyncio.client.V1ContainerStateDict
+    stopSignal: str
     user: kubernetes_asyncio.client.V1ContainerUserDict
     volumeMounts: list[kubernetes_asyncio.client.V1VolumeMountStatusDict]

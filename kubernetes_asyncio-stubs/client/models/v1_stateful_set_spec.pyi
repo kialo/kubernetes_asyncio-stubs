@@ -12,7 +12,7 @@ class V1StatefulSetSpec:
     replicas: typing.Optional[int]
     revision_history_limit: typing.Optional[int]
     selector: kubernetes_asyncio.client.V1LabelSelector
-    service_name: str
+    service_name: typing.Optional[str]
     template: kubernetes_asyncio.client.V1PodTemplateSpec
     update_strategy: typing.Optional[
         kubernetes_asyncio.client.V1StatefulSetUpdateStrategy
@@ -35,7 +35,7 @@ class V1StatefulSetSpec:
         replicas: typing.Optional[int] = ...,
         revision_history_limit: typing.Optional[int] = ...,
         selector: kubernetes_asyncio.client.V1LabelSelector,
-        service_name: str,
+        service_name: typing.Optional[str] = ...,
         template: kubernetes_asyncio.client.V1PodTemplateSpec,
         update_strategy: typing.Optional[
             kubernetes_asyncio.client.V1StatefulSetUpdateStrategy

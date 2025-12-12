@@ -609,18 +609,6 @@ from kubernetes_asyncio.client.models.v1_user_info import V1UserInfo as V1UserIn
 from kubernetes_asyncio.client.models.v1_user_info import (
     V1UserInfoDict as V1UserInfoDict,
 )
-from kubernetes_asyncio.client.models.v1beta1_self_subject_review import (
-    V1beta1SelfSubjectReview as V1beta1SelfSubjectReview,
-)
-from kubernetes_asyncio.client.models.v1beta1_self_subject_review import (
-    V1beta1SelfSubjectReviewDict as V1beta1SelfSubjectReviewDict,
-)
-from kubernetes_asyncio.client.models.v1beta1_self_subject_review_status import (
-    V1beta1SelfSubjectReviewStatus as V1beta1SelfSubjectReviewStatus,
-)
-from kubernetes_asyncio.client.models.v1beta1_self_subject_review_status import (
-    V1beta1SelfSubjectReviewStatusDict as V1beta1SelfSubjectReviewStatusDict,
-)
 from kubernetes_asyncio.client.models.v1_field_selector_attributes import (
     V1FieldSelectorAttributes as V1FieldSelectorAttributes,
 )
@@ -1027,6 +1015,24 @@ from kubernetes_asyncio.client.models.v1alpha1_cluster_trust_bundle_spec import 
 from kubernetes_asyncio.client.models.v1alpha1_cluster_trust_bundle_spec import (
     V1alpha1ClusterTrustBundleSpecDict as V1alpha1ClusterTrustBundleSpecDict,
 )
+from kubernetes_asyncio.client.models.v1beta1_cluster_trust_bundle import (
+    V1beta1ClusterTrustBundle as V1beta1ClusterTrustBundle,
+)
+from kubernetes_asyncio.client.models.v1beta1_cluster_trust_bundle import (
+    V1beta1ClusterTrustBundleDict as V1beta1ClusterTrustBundleDict,
+)
+from kubernetes_asyncio.client.models.v1beta1_cluster_trust_bundle_list import (
+    V1beta1ClusterTrustBundleList as V1beta1ClusterTrustBundleList,
+)
+from kubernetes_asyncio.client.models.v1beta1_cluster_trust_bundle_list import (
+    V1beta1ClusterTrustBundleListDict as V1beta1ClusterTrustBundleListDict,
+)
+from kubernetes_asyncio.client.models.v1beta1_cluster_trust_bundle_spec import (
+    V1beta1ClusterTrustBundleSpec as V1beta1ClusterTrustBundleSpec,
+)
+from kubernetes_asyncio.client.models.v1beta1_cluster_trust_bundle_spec import (
+    V1beta1ClusterTrustBundleSpecDict as V1beta1ClusterTrustBundleSpecDict,
+)
 from kubernetes_asyncio.client.models.v1_lease import V1Lease as V1Lease
 from kubernetes_asyncio.client.models.v1_lease import V1LeaseDict as V1LeaseDict
 from kubernetes_asyncio.client.models.v1_lease_list import V1LeaseList as V1LeaseList
@@ -1054,6 +1060,24 @@ from kubernetes_asyncio.client.models.v1alpha2_lease_candidate_spec import (
 )
 from kubernetes_asyncio.client.models.v1alpha2_lease_candidate_spec import (
     V1alpha2LeaseCandidateSpecDict as V1alpha2LeaseCandidateSpecDict,
+)
+from kubernetes_asyncio.client.models.v1beta1_lease_candidate import (
+    V1beta1LeaseCandidate as V1beta1LeaseCandidate,
+)
+from kubernetes_asyncio.client.models.v1beta1_lease_candidate import (
+    V1beta1LeaseCandidateDict as V1beta1LeaseCandidateDict,
+)
+from kubernetes_asyncio.client.models.v1beta1_lease_candidate_list import (
+    V1beta1LeaseCandidateList as V1beta1LeaseCandidateList,
+)
+from kubernetes_asyncio.client.models.v1beta1_lease_candidate_list import (
+    V1beta1LeaseCandidateListDict as V1beta1LeaseCandidateListDict,
+)
+from kubernetes_asyncio.client.models.v1beta1_lease_candidate_spec import (
+    V1beta1LeaseCandidateSpec as V1beta1LeaseCandidateSpec,
+)
+from kubernetes_asyncio.client.models.v1beta1_lease_candidate_spec import (
+    V1beta1LeaseCandidateSpecDict as V1beta1LeaseCandidateSpecDict,
 )
 from kubernetes_asyncio.client.models.v1_aws_elastic_block_store_volume_source import (
     V1AWSElasticBlockStoreVolumeSource as V1AWSElasticBlockStoreVolumeSource,
@@ -1661,6 +1685,12 @@ from kubernetes_asyncio.client.models.v1_node_status import V1NodeStatus as V1No
 from kubernetes_asyncio.client.models.v1_node_status import (
     V1NodeStatusDict as V1NodeStatusDict,
 )
+from kubernetes_asyncio.client.models.v1_node_swap_status import (
+    V1NodeSwapStatus as V1NodeSwapStatus,
+)
+from kubernetes_asyncio.client.models.v1_node_swap_status import (
+    V1NodeSwapStatusDict as V1NodeSwapStatusDict,
+)
 from kubernetes_asyncio.client.models.v1_node_system_info import (
     V1NodeSystemInfo as V1NodeSystemInfo,
 )
@@ -2255,6 +2285,8 @@ from kubernetes_asyncio.client.models.v1_endpoint_slice_list import (
 from kubernetes_asyncio.client.models.v1_endpoint_slice_list import (
     V1EndpointSliceListDict as V1EndpointSliceListDict,
 )
+from kubernetes_asyncio.client.models.v1_for_node import V1ForNode as V1ForNode
+from kubernetes_asyncio.client.models.v1_for_node import V1ForNodeDict as V1ForNodeDict
 from kubernetes_asyncio.client.models.v1_for_zone import V1ForZone as V1ForZone
 from kubernetes_asyncio.client.models.v1_for_zone import V1ForZoneDict as V1ForZoneDict
 from kubernetes_asyncio.client.models.events_v1_event import (
@@ -2423,6 +2455,22 @@ from kubernetes_asyncio.client.models.v1_http_ingress_rule_value import (
 from kubernetes_asyncio.client.models.v1_http_ingress_rule_value import (
     V1HTTPIngressRuleValueDict as V1HTTPIngressRuleValueDict,
 )
+from kubernetes_asyncio.client.models.v1_ip_address import V1IPAddress as V1IPAddress
+from kubernetes_asyncio.client.models.v1_ip_address import (
+    V1IPAddressDict as V1IPAddressDict,
+)
+from kubernetes_asyncio.client.models.v1_ip_address_list import (
+    V1IPAddressList as V1IPAddressList,
+)
+from kubernetes_asyncio.client.models.v1_ip_address_list import (
+    V1IPAddressListDict as V1IPAddressListDict,
+)
+from kubernetes_asyncio.client.models.v1_ip_address_spec import (
+    V1IPAddressSpec as V1IPAddressSpec,
+)
+from kubernetes_asyncio.client.models.v1_ip_address_spec import (
+    V1IPAddressSpecDict as V1IPAddressSpecDict,
+)
 from kubernetes_asyncio.client.models.v1_ip_block import V1IPBlock as V1IPBlock
 from kubernetes_asyncio.client.models.v1_ip_block import V1IPBlockDict as V1IPBlockDict
 from kubernetes_asyncio.client.models.v1_ingress import V1Ingress as V1Ingress
@@ -2551,11 +2599,41 @@ from kubernetes_asyncio.client.models.v1_network_policy_spec import (
 from kubernetes_asyncio.client.models.v1_network_policy_spec import (
     V1NetworkPolicySpecDict as V1NetworkPolicySpecDict,
 )
+from kubernetes_asyncio.client.models.v1_parent_reference import (
+    V1ParentReference as V1ParentReference,
+)
+from kubernetes_asyncio.client.models.v1_parent_reference import (
+    V1ParentReferenceDict as V1ParentReferenceDict,
+)
 from kubernetes_asyncio.client.models.v1_service_backend_port import (
     V1ServiceBackendPort as V1ServiceBackendPort,
 )
 from kubernetes_asyncio.client.models.v1_service_backend_port import (
     V1ServiceBackendPortDict as V1ServiceBackendPortDict,
+)
+from kubernetes_asyncio.client.models.v1_service_cidr import (
+    V1ServiceCIDR as V1ServiceCIDR,
+)
+from kubernetes_asyncio.client.models.v1_service_cidr import (
+    V1ServiceCIDRDict as V1ServiceCIDRDict,
+)
+from kubernetes_asyncio.client.models.v1_service_cidr_list import (
+    V1ServiceCIDRList as V1ServiceCIDRList,
+)
+from kubernetes_asyncio.client.models.v1_service_cidr_list import (
+    V1ServiceCIDRListDict as V1ServiceCIDRListDict,
+)
+from kubernetes_asyncio.client.models.v1_service_cidr_spec import (
+    V1ServiceCIDRSpec as V1ServiceCIDRSpec,
+)
+from kubernetes_asyncio.client.models.v1_service_cidr_spec import (
+    V1ServiceCIDRSpecDict as V1ServiceCIDRSpecDict,
+)
+from kubernetes_asyncio.client.models.v1_service_cidr_status import (
+    V1ServiceCIDRStatus as V1ServiceCIDRStatus,
+)
+from kubernetes_asyncio.client.models.v1_service_cidr_status import (
+    V1ServiceCIDRStatusDict as V1ServiceCIDRStatusDict,
 )
 from kubernetes_asyncio.client.models.v1beta1_ip_address import (
     V1beta1IPAddress as V1beta1IPAddress,
@@ -2737,6 +2815,18 @@ from kubernetes_asyncio.client.models.v1alpha3_cel_device_selector import (
 from kubernetes_asyncio.client.models.v1alpha3_cel_device_selector import (
     V1alpha3CELDeviceSelectorDict as V1alpha3CELDeviceSelectorDict,
 )
+from kubernetes_asyncio.client.models.v1alpha3_counter import (
+    V1alpha3Counter as V1alpha3Counter,
+)
+from kubernetes_asyncio.client.models.v1alpha3_counter import (
+    V1alpha3CounterDict as V1alpha3CounterDict,
+)
+from kubernetes_asyncio.client.models.v1alpha3_counter_set import (
+    V1alpha3CounterSet as V1alpha3CounterSet,
+)
+from kubernetes_asyncio.client.models.v1alpha3_counter_set import (
+    V1alpha3CounterSetDict as V1alpha3CounterSetDict,
+)
 from kubernetes_asyncio.client.models.v1alpha3_device import (
     V1alpha3Device as V1alpha3Device,
 )
@@ -2803,6 +2893,12 @@ from kubernetes_asyncio.client.models.v1alpha3_device_constraint import (
 from kubernetes_asyncio.client.models.v1alpha3_device_constraint import (
     V1alpha3DeviceConstraintDict as V1alpha3DeviceConstraintDict,
 )
+from kubernetes_asyncio.client.models.v1alpha3_device_counter_consumption import (
+    V1alpha3DeviceCounterConsumption as V1alpha3DeviceCounterConsumption,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_counter_consumption import (
+    V1alpha3DeviceCounterConsumptionDict as V1alpha3DeviceCounterConsumptionDict,
+)
 from kubernetes_asyncio.client.models.v1alpha3_device_request import (
     V1alpha3DeviceRequest as V1alpha3DeviceRequest,
 )
@@ -2820,6 +2916,48 @@ from kubernetes_asyncio.client.models.v1alpha3_device_selector import (
 )
 from kubernetes_asyncio.client.models.v1alpha3_device_selector import (
     V1alpha3DeviceSelectorDict as V1alpha3DeviceSelectorDict,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_sub_request import (
+    V1alpha3DeviceSubRequest as V1alpha3DeviceSubRequest,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_sub_request import (
+    V1alpha3DeviceSubRequestDict as V1alpha3DeviceSubRequestDict,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_taint import (
+    V1alpha3DeviceTaint as V1alpha3DeviceTaint,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_taint import (
+    V1alpha3DeviceTaintDict as V1alpha3DeviceTaintDict,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_taint_rule import (
+    V1alpha3DeviceTaintRule as V1alpha3DeviceTaintRule,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_taint_rule import (
+    V1alpha3DeviceTaintRuleDict as V1alpha3DeviceTaintRuleDict,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_taint_rule_list import (
+    V1alpha3DeviceTaintRuleList as V1alpha3DeviceTaintRuleList,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_taint_rule_list import (
+    V1alpha3DeviceTaintRuleListDict as V1alpha3DeviceTaintRuleListDict,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_taint_rule_spec import (
+    V1alpha3DeviceTaintRuleSpec as V1alpha3DeviceTaintRuleSpec,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_taint_rule_spec import (
+    V1alpha3DeviceTaintRuleSpecDict as V1alpha3DeviceTaintRuleSpecDict,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_taint_selector import (
+    V1alpha3DeviceTaintSelector as V1alpha3DeviceTaintSelector,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_taint_selector import (
+    V1alpha3DeviceTaintSelectorDict as V1alpha3DeviceTaintSelectorDict,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_toleration import (
+    V1alpha3DeviceToleration as V1alpha3DeviceToleration,
+)
+from kubernetes_asyncio.client.models.v1alpha3_device_toleration import (
+    V1alpha3DeviceTolerationDict as V1alpha3DeviceTolerationDict,
 )
 from kubernetes_asyncio.client.models.v1alpha3_network_device_data import (
     V1alpha3NetworkDeviceData as V1alpha3NetworkDeviceData,
@@ -2929,6 +3067,18 @@ from kubernetes_asyncio.client.models.v1beta1_cel_device_selector import (
 from kubernetes_asyncio.client.models.v1beta1_cel_device_selector import (
     V1beta1CELDeviceSelectorDict as V1beta1CELDeviceSelectorDict,
 )
+from kubernetes_asyncio.client.models.v1beta1_counter import (
+    V1beta1Counter as V1beta1Counter,
+)
+from kubernetes_asyncio.client.models.v1beta1_counter import (
+    V1beta1CounterDict as V1beta1CounterDict,
+)
+from kubernetes_asyncio.client.models.v1beta1_counter_set import (
+    V1beta1CounterSet as V1beta1CounterSet,
+)
+from kubernetes_asyncio.client.models.v1beta1_counter_set import (
+    V1beta1CounterSetDict as V1beta1CounterSetDict,
+)
 from kubernetes_asyncio.client.models.v1beta1_device import (
     V1beta1Device as V1beta1Device,
 )
@@ -3001,6 +3151,12 @@ from kubernetes_asyncio.client.models.v1beta1_device_constraint import (
 from kubernetes_asyncio.client.models.v1beta1_device_constraint import (
     V1beta1DeviceConstraintDict as V1beta1DeviceConstraintDict,
 )
+from kubernetes_asyncio.client.models.v1beta1_device_counter_consumption import (
+    V1beta1DeviceCounterConsumption as V1beta1DeviceCounterConsumption,
+)
+from kubernetes_asyncio.client.models.v1beta1_device_counter_consumption import (
+    V1beta1DeviceCounterConsumptionDict as V1beta1DeviceCounterConsumptionDict,
+)
 from kubernetes_asyncio.client.models.v1beta1_device_request import (
     V1beta1DeviceRequest as V1beta1DeviceRequest,
 )
@@ -3018,6 +3174,24 @@ from kubernetes_asyncio.client.models.v1beta1_device_selector import (
 )
 from kubernetes_asyncio.client.models.v1beta1_device_selector import (
     V1beta1DeviceSelectorDict as V1beta1DeviceSelectorDict,
+)
+from kubernetes_asyncio.client.models.v1beta1_device_sub_request import (
+    V1beta1DeviceSubRequest as V1beta1DeviceSubRequest,
+)
+from kubernetes_asyncio.client.models.v1beta1_device_sub_request import (
+    V1beta1DeviceSubRequestDict as V1beta1DeviceSubRequestDict,
+)
+from kubernetes_asyncio.client.models.v1beta1_device_taint import (
+    V1beta1DeviceTaint as V1beta1DeviceTaint,
+)
+from kubernetes_asyncio.client.models.v1beta1_device_taint import (
+    V1beta1DeviceTaintDict as V1beta1DeviceTaintDict,
+)
+from kubernetes_asyncio.client.models.v1beta1_device_toleration import (
+    V1beta1DeviceToleration as V1beta1DeviceToleration,
+)
+from kubernetes_asyncio.client.models.v1beta1_device_toleration import (
+    V1beta1DeviceTolerationDict as V1beta1DeviceTolerationDict,
 )
 from kubernetes_asyncio.client.models.v1beta1_network_device_data import (
     V1beta1NetworkDeviceData as V1beta1NetworkDeviceData,
@@ -3102,6 +3276,240 @@ from kubernetes_asyncio.client.models.v1beta1_resource_slice_spec import (
 )
 from kubernetes_asyncio.client.models.v1beta1_resource_slice_spec import (
     V1beta1ResourceSliceSpecDict as V1beta1ResourceSliceSpecDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_allocated_device_status import (
+    V1beta2AllocatedDeviceStatus as V1beta2AllocatedDeviceStatus,
+)
+from kubernetes_asyncio.client.models.v1beta2_allocated_device_status import (
+    V1beta2AllocatedDeviceStatusDict as V1beta2AllocatedDeviceStatusDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_allocation_result import (
+    V1beta2AllocationResult as V1beta2AllocationResult,
+)
+from kubernetes_asyncio.client.models.v1beta2_allocation_result import (
+    V1beta2AllocationResultDict as V1beta2AllocationResultDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_cel_device_selector import (
+    V1beta2CELDeviceSelector as V1beta2CELDeviceSelector,
+)
+from kubernetes_asyncio.client.models.v1beta2_cel_device_selector import (
+    V1beta2CELDeviceSelectorDict as V1beta2CELDeviceSelectorDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_counter import (
+    V1beta2Counter as V1beta2Counter,
+)
+from kubernetes_asyncio.client.models.v1beta2_counter import (
+    V1beta2CounterDict as V1beta2CounterDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_counter_set import (
+    V1beta2CounterSet as V1beta2CounterSet,
+)
+from kubernetes_asyncio.client.models.v1beta2_counter_set import (
+    V1beta2CounterSetDict as V1beta2CounterSetDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device import (
+    V1beta2Device as V1beta2Device,
+)
+from kubernetes_asyncio.client.models.v1beta2_device import (
+    V1beta2DeviceDict as V1beta2DeviceDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_allocation_configuration import (
+    V1beta2DeviceAllocationConfiguration as V1beta2DeviceAllocationConfiguration,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_allocation_configuration import (
+    V1beta2DeviceAllocationConfigurationDict as V1beta2DeviceAllocationConfigurationDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_allocation_result import (
+    V1beta2DeviceAllocationResult as V1beta2DeviceAllocationResult,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_allocation_result import (
+    V1beta2DeviceAllocationResultDict as V1beta2DeviceAllocationResultDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_attribute import (
+    V1beta2DeviceAttribute as V1beta2DeviceAttribute,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_attribute import (
+    V1beta2DeviceAttributeDict as V1beta2DeviceAttributeDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_capacity import (
+    V1beta2DeviceCapacity as V1beta2DeviceCapacity,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_capacity import (
+    V1beta2DeviceCapacityDict as V1beta2DeviceCapacityDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_claim import (
+    V1beta2DeviceClaim as V1beta2DeviceClaim,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_claim import (
+    V1beta2DeviceClaimDict as V1beta2DeviceClaimDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_claim_configuration import (
+    V1beta2DeviceClaimConfiguration as V1beta2DeviceClaimConfiguration,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_claim_configuration import (
+    V1beta2DeviceClaimConfigurationDict as V1beta2DeviceClaimConfigurationDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_class import (
+    V1beta2DeviceClass as V1beta2DeviceClass,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_class import (
+    V1beta2DeviceClassDict as V1beta2DeviceClassDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_class_configuration import (
+    V1beta2DeviceClassConfiguration as V1beta2DeviceClassConfiguration,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_class_configuration import (
+    V1beta2DeviceClassConfigurationDict as V1beta2DeviceClassConfigurationDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_class_list import (
+    V1beta2DeviceClassList as V1beta2DeviceClassList,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_class_list import (
+    V1beta2DeviceClassListDict as V1beta2DeviceClassListDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_class_spec import (
+    V1beta2DeviceClassSpec as V1beta2DeviceClassSpec,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_class_spec import (
+    V1beta2DeviceClassSpecDict as V1beta2DeviceClassSpecDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_constraint import (
+    V1beta2DeviceConstraint as V1beta2DeviceConstraint,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_constraint import (
+    V1beta2DeviceConstraintDict as V1beta2DeviceConstraintDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_counter_consumption import (
+    V1beta2DeviceCounterConsumption as V1beta2DeviceCounterConsumption,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_counter_consumption import (
+    V1beta2DeviceCounterConsumptionDict as V1beta2DeviceCounterConsumptionDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_request import (
+    V1beta2DeviceRequest as V1beta2DeviceRequest,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_request import (
+    V1beta2DeviceRequestDict as V1beta2DeviceRequestDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_request_allocation_result import (
+    V1beta2DeviceRequestAllocationResult as V1beta2DeviceRequestAllocationResult,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_request_allocation_result import (
+    V1beta2DeviceRequestAllocationResultDict as V1beta2DeviceRequestAllocationResultDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_selector import (
+    V1beta2DeviceSelector as V1beta2DeviceSelector,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_selector import (
+    V1beta2DeviceSelectorDict as V1beta2DeviceSelectorDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_sub_request import (
+    V1beta2DeviceSubRequest as V1beta2DeviceSubRequest,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_sub_request import (
+    V1beta2DeviceSubRequestDict as V1beta2DeviceSubRequestDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_taint import (
+    V1beta2DeviceTaint as V1beta2DeviceTaint,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_taint import (
+    V1beta2DeviceTaintDict as V1beta2DeviceTaintDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_toleration import (
+    V1beta2DeviceToleration as V1beta2DeviceToleration,
+)
+from kubernetes_asyncio.client.models.v1beta2_device_toleration import (
+    V1beta2DeviceTolerationDict as V1beta2DeviceTolerationDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_exact_device_request import (
+    V1beta2ExactDeviceRequest as V1beta2ExactDeviceRequest,
+)
+from kubernetes_asyncio.client.models.v1beta2_exact_device_request import (
+    V1beta2ExactDeviceRequestDict as V1beta2ExactDeviceRequestDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_network_device_data import (
+    V1beta2NetworkDeviceData as V1beta2NetworkDeviceData,
+)
+from kubernetes_asyncio.client.models.v1beta2_network_device_data import (
+    V1beta2NetworkDeviceDataDict as V1beta2NetworkDeviceDataDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_opaque_device_configuration import (
+    V1beta2OpaqueDeviceConfiguration as V1beta2OpaqueDeviceConfiguration,
+)
+from kubernetes_asyncio.client.models.v1beta2_opaque_device_configuration import (
+    V1beta2OpaqueDeviceConfigurationDict as V1beta2OpaqueDeviceConfigurationDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim import (
+    V1beta2ResourceClaim as V1beta2ResourceClaim,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim import (
+    V1beta2ResourceClaimDict as V1beta2ResourceClaimDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_consumer_reference import (
+    V1beta2ResourceClaimConsumerReference as V1beta2ResourceClaimConsumerReference,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_consumer_reference import (
+    V1beta2ResourceClaimConsumerReferenceDict as V1beta2ResourceClaimConsumerReferenceDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_list import (
+    V1beta2ResourceClaimList as V1beta2ResourceClaimList,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_list import (
+    V1beta2ResourceClaimListDict as V1beta2ResourceClaimListDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_spec import (
+    V1beta2ResourceClaimSpec as V1beta2ResourceClaimSpec,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_spec import (
+    V1beta2ResourceClaimSpecDict as V1beta2ResourceClaimSpecDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_status import (
+    V1beta2ResourceClaimStatus as V1beta2ResourceClaimStatus,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_status import (
+    V1beta2ResourceClaimStatusDict as V1beta2ResourceClaimStatusDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_template import (
+    V1beta2ResourceClaimTemplate as V1beta2ResourceClaimTemplate,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_template import (
+    V1beta2ResourceClaimTemplateDict as V1beta2ResourceClaimTemplateDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_template_list import (
+    V1beta2ResourceClaimTemplateList as V1beta2ResourceClaimTemplateList,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_template_list import (
+    V1beta2ResourceClaimTemplateListDict as V1beta2ResourceClaimTemplateListDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_template_spec import (
+    V1beta2ResourceClaimTemplateSpec as V1beta2ResourceClaimTemplateSpec,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_claim_template_spec import (
+    V1beta2ResourceClaimTemplateSpecDict as V1beta2ResourceClaimTemplateSpecDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_pool import (
+    V1beta2ResourcePool as V1beta2ResourcePool,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_pool import (
+    V1beta2ResourcePoolDict as V1beta2ResourcePoolDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_slice import (
+    V1beta2ResourceSlice as V1beta2ResourceSlice,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_slice import (
+    V1beta2ResourceSliceDict as V1beta2ResourceSliceDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_slice_list import (
+    V1beta2ResourceSliceList as V1beta2ResourceSliceList,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_slice_list import (
+    V1beta2ResourceSliceListDict as V1beta2ResourceSliceListDict,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_slice_spec import (
+    V1beta2ResourceSliceSpec as V1beta2ResourceSliceSpec,
+)
+from kubernetes_asyncio.client.models.v1beta2_resource_slice_spec import (
+    V1beta2ResourceSliceSpecDict as V1beta2ResourceSliceSpecDict,
 )
 from kubernetes_asyncio.client.models.v1_priority_class import (
     V1PriorityClass as V1PriorityClass,
@@ -3582,9 +3990,6 @@ from kubernetes_asyncio.client.api.authentication_api import (
 from kubernetes_asyncio.client.api.authentication_v1_api import (
     AuthenticationV1Api as AuthenticationV1Api,
 )
-from kubernetes_asyncio.client.api.authentication_v1beta1_api import (
-    AuthenticationV1beta1Api as AuthenticationV1beta1Api,
-)
 from kubernetes_asyncio.client.api.authorization_api import (
     AuthorizationApi as AuthorizationApi,
 )
@@ -3611,6 +4016,9 @@ from kubernetes_asyncio.client.api.certificates_v1_api import (
 from kubernetes_asyncio.client.api.certificates_v1alpha1_api import (
     CertificatesV1alpha1Api as CertificatesV1alpha1Api,
 )
+from kubernetes_asyncio.client.api.certificates_v1beta1_api import (
+    CertificatesV1beta1Api as CertificatesV1beta1Api,
+)
 from kubernetes_asyncio.client.api.coordination_api import (
     CoordinationApi as CoordinationApi,
 )
@@ -3619,6 +4027,9 @@ from kubernetes_asyncio.client.api.coordination_v1_api import (
 )
 from kubernetes_asyncio.client.api.coordination_v1alpha2_api import (
     CoordinationV1alpha2Api as CoordinationV1alpha2Api,
+)
+from kubernetes_asyncio.client.api.coordination_v1beta1_api import (
+    CoordinationV1beta1Api as CoordinationV1beta1Api,
 )
 from kubernetes_asyncio.client.api.discovery_api import DiscoveryApi as DiscoveryApi
 from kubernetes_asyncio.client.api.discovery_v1_api import (
@@ -3661,6 +4072,9 @@ from kubernetes_asyncio.client.api.resource_v1alpha3_api import (
 )
 from kubernetes_asyncio.client.api.resource_v1beta1_api import (
     ResourceV1beta1Api as ResourceV1beta1Api,
+)
+from kubernetes_asyncio.client.api.resource_v1beta2_api import (
+    ResourceV1beta2Api as ResourceV1beta2Api,
 )
 from kubernetes_asyncio.client.api.scheduling_api import SchedulingApi as SchedulingApi
 from kubernetes_asyncio.client.api.scheduling_v1_api import (

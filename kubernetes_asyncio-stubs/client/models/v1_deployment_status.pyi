@@ -9,6 +9,7 @@ class V1DeploymentStatus:
     observed_generation: typing.Optional[int]
     ready_replicas: typing.Optional[int]
     replicas: typing.Optional[int]
+    terminating_replicas: typing.Optional[int]
     unavailable_replicas: typing.Optional[int]
     updated_replicas: typing.Optional[int]
 
@@ -23,6 +24,7 @@ class V1DeploymentStatus:
         observed_generation: typing.Optional[int] = ...,
         ready_replicas: typing.Optional[int] = ...,
         replicas: typing.Optional[int] = ...,
+        terminating_replicas: typing.Optional[int] = ...,
         unavailable_replicas: typing.Optional[int] = ...,
         updated_replicas: typing.Optional[int] = ...,
     ) -> None: ...
@@ -35,5 +37,6 @@ class V1DeploymentStatusDict(typing.TypedDict, total=False):
     observedGeneration: int
     readyReplicas: int
     replicas: int
+    terminatingReplicas: int
     unavailableReplicas: int
     updatedReplicas: int
