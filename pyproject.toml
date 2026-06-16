@@ -14,5 +14,11 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["kubernetes_asyncio-stubs", "kubernetes_asyncio_ext"]
 
-[tool.uv]
-dev-dependencies = ["inflection", "ruff"]
+[dependency-groups]
+dev = [
+  "inflection",
+  "ruff",
+]
+
+[tool.ruff]
+exclude = ["kubernetes_asyncio"]
