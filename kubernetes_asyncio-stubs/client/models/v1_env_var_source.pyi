@@ -7,6 +7,7 @@ class V1EnvVarSource:
         kubernetes_asyncio.client.V1ConfigMapKeySelector
     ]
     field_ref: typing.Optional[kubernetes_asyncio.client.V1ObjectFieldSelector]
+    file_key_ref: typing.Optional[kubernetes_asyncio.client.V1FileKeySelector]
     resource_field_ref: typing.Optional[
         kubernetes_asyncio.client.V1ResourceFieldSelector
     ]
@@ -21,6 +22,9 @@ class V1EnvVarSource:
         field_ref: typing.Optional[
             kubernetes_asyncio.client.V1ObjectFieldSelector
         ] = ...,
+        file_key_ref: typing.Optional[
+            kubernetes_asyncio.client.V1FileKeySelector
+        ] = ...,
         resource_field_ref: typing.Optional[
             kubernetes_asyncio.client.V1ResourceFieldSelector
         ] = ...,
@@ -33,5 +37,6 @@ class V1EnvVarSource:
 class V1EnvVarSourceDict(typing.TypedDict, total=False):
     configMapKeyRef: kubernetes_asyncio.client.V1ConfigMapKeySelectorDict
     fieldRef: kubernetes_asyncio.client.V1ObjectFieldSelectorDict
+    fileKeyRef: kubernetes_asyncio.client.V1FileKeySelectorDict
     resourceFieldRef: kubernetes_asyncio.client.V1ResourceFieldSelectorDict
     secretKeyRef: kubernetes_asyncio.client.V1SecretKeySelectorDict

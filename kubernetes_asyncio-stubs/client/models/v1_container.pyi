@@ -19,6 +19,9 @@ class V1Container:
     ]
     resources: typing.Optional[kubernetes_asyncio.client.V1ResourceRequirements]
     restart_policy: typing.Optional[str]
+    restart_policy_rules: typing.Optional[
+        list[kubernetes_asyncio.client.V1ContainerRestartRule]
+    ]
     security_context: typing.Optional[kubernetes_asyncio.client.V1SecurityContext]
     startup_probe: typing.Optional[kubernetes_asyncio.client.V1Probe]
     stdin: typing.Optional[bool]
@@ -53,6 +56,9 @@ class V1Container:
             kubernetes_asyncio.client.V1ResourceRequirements
         ] = ...,
         restart_policy: typing.Optional[str] = ...,
+        restart_policy_rules: typing.Optional[
+            list[kubernetes_asyncio.client.V1ContainerRestartRule]
+        ] = ...,
         security_context: typing.Optional[
             kubernetes_asyncio.client.V1SecurityContext
         ] = ...,
@@ -87,6 +93,7 @@ class V1ContainerDict(typing.TypedDict, total=False):
     resizePolicy: list[kubernetes_asyncio.client.V1ContainerResizePolicyDict]
     resources: kubernetes_asyncio.client.V1ResourceRequirementsDict
     restartPolicy: str
+    restartPolicyRules: list[kubernetes_asyncio.client.V1ContainerRestartRuleDict]
     securityContext: kubernetes_asyncio.client.V1SecurityContextDict
     startupProbe: kubernetes_asyncio.client.V1ProbeDict
     stdin: bool

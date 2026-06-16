@@ -5,6 +5,7 @@ import typing
 class V1beta2ExactDeviceRequest:
     admin_access: typing.Optional[bool]
     allocation_mode: typing.Optional[str]
+    capacity: typing.Optional[kubernetes_asyncio.client.V1beta2CapacityRequirements]
     count: typing.Optional[int]
     device_class_name: str
     selectors: typing.Optional[list[kubernetes_asyncio.client.V1beta2DeviceSelector]]
@@ -17,6 +18,9 @@ class V1beta2ExactDeviceRequest:
         *,
         admin_access: typing.Optional[bool] = ...,
         allocation_mode: typing.Optional[str] = ...,
+        capacity: typing.Optional[
+            kubernetes_asyncio.client.V1beta2CapacityRequirements
+        ] = ...,
         count: typing.Optional[int] = ...,
         device_class_name: str,
         selectors: typing.Optional[
@@ -31,6 +35,7 @@ class V1beta2ExactDeviceRequest:
 class V1beta2ExactDeviceRequestDict(typing.TypedDict, total=False):
     adminAccess: bool
     allocationMode: str
+    capacity: kubernetes_asyncio.client.V1beta2CapacityRequirementsDict
     count: int
     deviceClassName: str
     selectors: list[kubernetes_asyncio.client.V1beta2DeviceSelectorDict]

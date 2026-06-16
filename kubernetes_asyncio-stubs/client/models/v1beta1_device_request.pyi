@@ -5,6 +5,7 @@ import typing
 class V1beta1DeviceRequest:
     admin_access: typing.Optional[bool]
     allocation_mode: typing.Optional[str]
+    capacity: typing.Optional[kubernetes_asyncio.client.V1beta1CapacityRequirements]
     count: typing.Optional[int]
     device_class_name: typing.Optional[str]
     first_available: typing.Optional[
@@ -21,6 +22,9 @@ class V1beta1DeviceRequest:
         *,
         admin_access: typing.Optional[bool] = ...,
         allocation_mode: typing.Optional[str] = ...,
+        capacity: typing.Optional[
+            kubernetes_asyncio.client.V1beta1CapacityRequirements
+        ] = ...,
         count: typing.Optional[int] = ...,
         device_class_name: typing.Optional[str] = ...,
         first_available: typing.Optional[
@@ -39,6 +43,7 @@ class V1beta1DeviceRequest:
 class V1beta1DeviceRequestDict(typing.TypedDict, total=False):
     adminAccess: bool
     allocationMode: str
+    capacity: kubernetes_asyncio.client.V1beta1CapacityRequirementsDict
     count: int
     deviceClassName: str
     firstAvailable: list[kubernetes_asyncio.client.V1beta1DeviceSubRequestDict]

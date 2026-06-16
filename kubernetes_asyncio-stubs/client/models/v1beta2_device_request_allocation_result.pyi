@@ -4,10 +4,14 @@ import typing
 
 class V1beta2DeviceRequestAllocationResult:
     admin_access: typing.Optional[bool]
+    binding_conditions: typing.Optional[list[str]]
+    binding_failure_conditions: typing.Optional[list[str]]
+    consumed_capacity: typing.Optional[dict[str, str]]
     device: str
     driver: str
     pool: str
     request: str
+    share_id: typing.Optional[str]
     tolerations: typing.Optional[
         list[kubernetes_asyncio.client.V1beta2DeviceToleration]
     ]
@@ -16,10 +20,14 @@ class V1beta2DeviceRequestAllocationResult:
         self,
         *,
         admin_access: typing.Optional[bool] = ...,
+        binding_conditions: typing.Optional[list[str]] = ...,
+        binding_failure_conditions: typing.Optional[list[str]] = ...,
+        consumed_capacity: typing.Optional[dict[str, str]] = ...,
         device: str,
         driver: str,
         pool: str,
         request: str,
+        share_id: typing.Optional[str] = ...,
         tolerations: typing.Optional[
             list[kubernetes_asyncio.client.V1beta2DeviceToleration]
         ] = ...,
@@ -28,8 +36,12 @@ class V1beta2DeviceRequestAllocationResult:
 
 class V1beta2DeviceRequestAllocationResultDict(typing.TypedDict, total=False):
     adminAccess: bool
+    bindingConditions: list[str]
+    bindingFailureConditions: list[str]
+    consumedCapacity: dict[str, str]
     device: str
     driver: str
     pool: str
     request: str
+    shareID: str
     tolerations: list[kubernetes_asyncio.client.V1beta2DeviceTolerationDict]

@@ -8,6 +8,9 @@ class V1VolumeProjection:
     ]
     config_map: typing.Optional[kubernetes_asyncio.client.V1ConfigMapProjection]
     downward_api: typing.Optional[kubernetes_asyncio.client.V1DownwardAPIProjection]
+    pod_certificate: typing.Optional[
+        kubernetes_asyncio.client.V1PodCertificateProjection
+    ]
     secret: typing.Optional[kubernetes_asyncio.client.V1SecretProjection]
     service_account_token: typing.Optional[
         kubernetes_asyncio.client.V1ServiceAccountTokenProjection
@@ -25,6 +28,9 @@ class V1VolumeProjection:
         downward_api: typing.Optional[
             kubernetes_asyncio.client.V1DownwardAPIProjection
         ] = ...,
+        pod_certificate: typing.Optional[
+            kubernetes_asyncio.client.V1PodCertificateProjection
+        ] = ...,
         secret: typing.Optional[kubernetes_asyncio.client.V1SecretProjection] = ...,
         service_account_token: typing.Optional[
             kubernetes_asyncio.client.V1ServiceAccountTokenProjection
@@ -36,5 +42,6 @@ class V1VolumeProjectionDict(typing.TypedDict, total=False):
     clusterTrustBundle: kubernetes_asyncio.client.V1ClusterTrustBundleProjectionDict
     configMap: kubernetes_asyncio.client.V1ConfigMapProjectionDict
     downwardAPI: kubernetes_asyncio.client.V1DownwardAPIProjectionDict
+    podCertificate: kubernetes_asyncio.client.V1PodCertificateProjectionDict
     secret: kubernetes_asyncio.client.V1SecretProjectionDict
     serviceAccountToken: kubernetes_asyncio.client.V1ServiceAccountTokenProjectionDict
